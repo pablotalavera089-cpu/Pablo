@@ -2,7 +2,7 @@
 
 Personal portfolio website for Pablo Talavera, multidisciplinary performance artist.
 
-**Live site:** `https://[your-username].github.io/pablo-portfolio`
+**Live site:** `https://pablotalavera.github.io/pablo-portfolio`
 
 ## Features
 
