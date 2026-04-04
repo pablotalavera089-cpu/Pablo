@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Pablo Talavera — Professional performance artist specializing in circus arts, physical theatre, and immersive experiences across Europe. Book workshops, performances, and custom events."/>
+    <meta name="keywords" content="performance artist, circus arts, physical theatre, workshop, contact staff, fire performance, booking"/>
+    <meta name="author" content="Pablo Talavera"/>
+    <meta name="theme-color" content="#080706"/>
+    <meta property="og:title" content="Pablo Talavera — Performance Artist"/>
+    <meta property="og:description" content="Professional performance artist specializing in circus, theatre, and immersive experiences."/>
+    <meta property="og:image" content="https://res.cloudinary.com/dol2caucl/image/upload/v1775279849/Segment_20260404_115047120_qnnkly.png"/>
+    <meta property="og:url" content="https://pablotalavera089-cpu.github.io/Portfolio/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="canonical" href="https://pablotalavera089-cpu.github.io/Portfolio/"/>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23b8975a'>P</text></svg>"/>
+    <title>Pablo Talavera — Performance Artist | Circus Arts | Physical Theatre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --black: #080706;
+            --ink: #0f0d0b;
+            --cream: #e9e4da;
+            --warm: #f2ede4;
+            --brown: #3b2f26;
+            --mid: #604a38;
+            --light: #8c7060;
+            --gold: #b8975a;
+            --gold2: #d4b278;
+            --transition: all .22s cubic-bezier(.16,1,.3,1);
+        }
+
+        *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--cream); overflow-x: hidden; cursor: none; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; line-height: 1.6; }
+        img { display: block; max-width: 100%; height: auto; loading: lazy; }
+        a { text-decoration: none; color: inherit; }
+        button { font-family: inherit; cursor: pointer; transition: var(--transition); border: none; }
+        h1,h2,h3,h4,h5,h6 { line-height: 1.1; }
+
+        /* ═══════════════════════════════════════════
+           CURSOR
+           ═══════════════════════════════════════════ */
+        #cur { position: fixed; width: 7px; height: 7px; background: var(--cream); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width .2s, height .2s; }
+        #cur-r { position: fixed; width: 34px; height: 34px; border: 1px solid rgba(233,228,218,.4); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width .3s, height .3s; }
+
+        /* ═══════════════════════════════════════════
+           NAVIGATION
+           ═══════════════════════════════════════════ */
+        #mnav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; padding: 1.2rem 2.6rem; display: flex; justify-content: space-between; align-items: center; transition: background .4s; }
+        #mnav.scrolled { background: rgba(8,7,6,.92); backdrop-filter: blur(14px); }
+        .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: .85rem; letter-spacing: 4px; text-transform: uppercase; color: var(--cream); opacity: .85; font-weight: 400; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links a { font-size: .7rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cream); opacity: .55; transition: opacity .25s; }
+        .nav-links a:hover { opacity: 1; }
+
+        /* MOBILE MENU */
+        .menu-toggle { display: none; background: none; border: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; z-index: 501; padding: .5rem; width: 44px; height: 44px; align-items: center; justify-content: center; }
+        .mobile-nav { position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: rgba(8,7,6,.99); backdrop-filter: blur(20px); border-left: 1px solid rgba(233,228,218,.1); z-index: 490; transition: right .35s cubic-bezier(.16,1,.3,1); overflow-y: auto; padding-top: 5rem; }
+        .mobile-nav.open { right: 0; }
+        .mobile-nav a, .mobile-nav button { display: flex; align-items: center; gap: .8rem; width: 100%; padding: 1.2rem 1.8rem; color: var(--cream); border: none; background: none; text-align: left; border-left: 3px solid transparent; border-bottom: 1px solid rgba(233,228,218,.05); font-size: .9rem; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; font-family: inherit; }
+        .mobile-nav a:hover, .mobile-nav button:hover { background: rgba(233,228,218,.08); border-left-color: var(--gold); }
+        .mobile-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: var(--cream); font-size: 1.3rem; cursor: pointer; padding: .5rem; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+
+        /* PILL NAV */
+        #pnav { position: fixed; top: 4.8rem; left: 50%; transform: translateX(-50%); z-index: 480; background: rgba(10,9,8,.88); backdrop-filter: blur(20px); border: 1px solid rgba(233,228,218,.1); border-radius: 999px; padding: .4rem .5rem; display: flex; gap: .2rem; }
+        .pb { font-family: 'DM Mono', monospace; font-size: .54rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(233,228,218,.5); padding: .35rem .85rem; border-radius: 999px; border: none; background: transparent; cursor: pointer; white-space: nowrap; }
+        .pb:hover { color: var(--cream); background: rgba(233,228,218,.07); }
+        .pb.on { background: var(--cream); color: var(--ink); }
+
+        /* ═══════════════════════════════════════════
+           HERO SECTION
+           ═══════════════════════════════════════════ */
+        #hero { position: relative; height: 100vh; background: var(--black); display: flex; align-items: center; overflow: hidden; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+        .orb1 { width: 60vw; height: 60vw; top: -15%; right: -10%; background: radial-gradient(circle, rgba(90,58,28,.35) 0%, transparent 70%); }
+        .orb2 { width: 38vw; height: 38vw; bottom: 0; left: -12%; background: radial-gradient(circle, rgba(58,42,22,.25) 0%, transparent 70%); }
+        .hero-layout { position: relative; z-index: 2; width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 5vw; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4rem; }
+        .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.6rem; opacity: 0; animation: slr .8s .2s forwards; }
+        .hero-name { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(4.5rem, 10vw, 9rem); line-height: .86; color: var(--cream); overflow: hidden; }
+        .hero-name span { display: block; opacity: 0; animation: slr 1s forwards; }
+        .hero-name span:nth-child(1) { animation-delay: .35s; }
+        .hero-name span:nth-child(2) { animation-delay: .48s; }
+        .hero-desc { margin-top: 2rem; font-size: 1.05rem; line-height: 1.75; color: rgba(233,228,218,.72); max-width: 420px; opacity: 0; animation: slr .9s .75s forwards; }
+        .hero-btns { margin-top: 2.5rem; display: flex; gap: 1rem; opacity: 0; animation: fdi 1s 1.1s forwards; flex-wrap: wrap; }
+        .btn-pri, .btn-gh { font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; border-radius: 999px; padding: .8rem 2rem; white-space: nowrap; display: inline-flex; align-items: center; gap: .5rem; }
+        .btn-pri { background: var(--cream); color: var(--ink); }
+        .btn-pri:hover { background: var(--gold2); transform: translateY(-2px); }
+        .btn-gh { background: transparent; color: var(--cream); border: 1px solid rgba(233,228,218,.22); }
+        .btn-gh:hover { border-color: var(--cream); transform: translateY(-2px); }
+        .hero-right-col { display: flex; flex-direction: column; align-items: flex-end; gap: 1.6rem; opacity: 0; animation: fdi .9s .6s forwards; }
+        .hstat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; color: var(--cream); }
+        .hstat-l { font-family: 'DM Mono', monospace; font-size: .54rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(233,228,218,.45); margin-top: .1rem; display: flex; align-items: center; gap: .4rem; }
+
+        @keyframes slr { to { opacity: 1; transform: translateX(0); } }
+        @keyframes fdi { to { opacity: 1; } }
+
+        /* ═══════════════════════════════════════════
+           NEW SECTIONS - INTEGRATED INTO HOME
+           ═══════════════════════════════════════════ */
+
+        /* TESTIMONIALS */
+        .testimonials-sec { background: var(--black); padding: 5rem 5vw; }
+        .testimonials-inner { max-width: 1280px; margin: 0 auto; }
+        .testimonials-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 300; line-height: .9; color: var(--cream); margin-bottom: 3rem; }
+        .carousel { position: relative; max-width: 800px; margin: 0 auto; }
+        .carousel-item { display: none; opacity: 0; transition: opacity .5s ease; text-align: center; }
+        .carousel-item.active { display: block; opacity: 1; }
+        .testimonial-text { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--cream); margin-bottom: 1.5rem; line-height: 1.6; }
+        .testimonial-author { font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+        .carousel-nav { display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem; }
+        .carousel-nav button { background: var(--gold); color: var(--ink); border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: 600; transition: background .2s; }
+        .carousel-nav button:hover { background: var(--gold2); }
+
+        /* BOOKING */
+        .booking-sec { background: var(--warm); color: var(--brown); padding: 5rem 5vw; }
+        .booking-inner { max-width: 650px; margin: 0 auto; }
+        .booking-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; line-height: .9; color: var(--brown); margin-bottom: 2rem; }
+        .booking-form { display: flex; flex-direction: column; gap: 1.5rem; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mid); margin-bottom: .5rem; font-weight: 600; }
+        .form-group input, .form-group textarea { padding: 1rem; border: 1.5px solid var(--brown); border-radius: 8px; font-family: 'DM Sans'; font-size: .95rem; color: var(--brown); transition: border-color .2s; background: rgba(255,255,255,.95); }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,151,90,.1); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .submit-btn { background: var(--gold); color: var(--ink); border: none; border-radius: 8px; padding: 1rem 2rem; font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; cursor: pointer; transition: background .2s; }
+        .submit-btn:hover { background: var(--gold2); }
+        .form-success { color: var(--gold); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: 1px; text-align: center; margin-top: 1rem; display: none; }
+        .form-success.show { display: block; animation: slideIn .3s ease; }
+
+        /* MEDIA KIT */
+        .media-kit-sec { background: var(--black); padding: 5rem 5vw; }
+        .media-kit-inner { max-width: 1280px; margin: 0 auto; }
+        .media-kit-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 300; line-height: .9; color: var(--cream); margin-bottom: 3rem; }
+        .media-kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+        .media-card { background: rgba(233,228,218,.038); border: 1px solid rgba(233,228,218,.08); border-radius: 14px; padding: 2.5rem; text-align: center; transition: var(--transition); }
+        .media-card:hover { background: rgba(233,228,218,.09); transform: translateY(-5px); border-color: rgba(184,151,90,.3); }
+        .media-icon { font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
+        .media-label { font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+        .media-btn { background: var(--gold); color: var(--ink); border: none; border-radius: 8px; padding: .8rem 2rem; font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; cursor: pointer; transition: background .2s; }
+        .media-btn:hover { background: var(--gold2); }
+
+        /* LINKTREE */
+        .linktree-sec { background: var(--black); padding: 5rem 5vw 4rem; }
+        .linktree-inner { max-width: 650px; margin: 0 auto; width: 100%; text-align: center; }
+        .linktree-avatar { width: 140px; height: 140px; margin: 0 auto 2.5rem; border-radius: 50%; background: linear-gradient(135deg, rgba(184,151,90,.25), rgba(184,151,90,.08)); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; border: 3px solid rgba(184,151,90,.3); color: var(--gold); }
+        .linktree-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 300; color: var(--cream); margin-bottom: 1rem; line-height: 1.1; }
+        .linktree-subtitle { font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; }
+        .linktree-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; max-width: 100%; }
+        .link-card { background: rgba(233,228,218,.038); border: 1px solid rgba(233,228,218,.08); border-radius: 16px; padding: 2rem; transition: var(--transition); display: flex; align-items: center; gap: 1.8rem; cursor: pointer; text-align: left; }
+        .link-card:hover { background: rgba(233,228,218,.09); transform: translateX(8px); border-color: rgba(184,151,90,.3); }
+        .link-ico { font-size: 2.4rem; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(184,151,90,.15); border-radius: 14px; color: var(--gold); flex-shrink: 0; }
+        .link-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--cream); margin-bottom: .4rem; font-weight: 400; }
+        .link-content p { font-size: .88rem; color: rgba(233,228,218,.55); }
+        .link-arrow { margin-left: auto; opacity: .3; transition: opacity .3s; font-size: 1.3rem; }
+        .link-card:hover .link-arrow { opacity: 1; }
+
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ADMIN */
+        .admin-panel { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; }
+        .admin-btn { width: 56px; height: 56px; border-radius: 50%; background: rgba(184,151,90,.2); border: 2.5px solid var(--gold); color: var(--gold); font-size: 1.4rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .admin-btn:hover { background: var(--gold); color: var(--ink); transform: scale(1.1); }
+
+        /* REVEAL ANIMATIONS */
+        .rv { opacity: 0; transform: translateY(20px); transition: opacity .75s ease, transform .75s cubic-bezier(.16,1,.3,1); }
+        .rv.in { opacity: 1; transform: none; }
+        .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; } .d4 { transition-delay: .4s; } .d5 { transition-delay: .5s; }
+
+        /* RESPONSIVE */
+        @media(max-width: 1024px) { .nav-links { display: none; } }
+        @media(max-width: 768px) {
+            #mnav { padding: .8rem 1.6rem; }
+            .menu-toggle { display: flex; }
+            #pnav { display: none; }
+            .media-kit-grid { grid-template-columns: 1fr; }
+            .carousel-nav { gap: 1rem; }
+            .carousel-nav button { width: 40px; height: 40px; font-size: .8rem; }
+            .link-card { flex-direction: column; text-align: center; }
+            .link-arrow { display: none; }
+        }
+        @media(max-width: 480px) {
+            #mnav { padding: .8rem 1rem; }
+            .nav-brand { font-size: .65rem; }
+            .menu-toggle { font-size: 1.2rem; }
+            .hero-name { font-size: clamp(3rem, 12vw, 5rem); }
+            .mobile-nav { width: 85vw; }
+        }
+    </style>
+</head>
+<body>
+<div id="cur"></div><div id="cur-r"></div>
+
+<!-- NAVIGATION -->
+<nav id="mnav" role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">Pablo Talavera</div>
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links">
+        <li><a href="#home" onclick="scrollTo('hero');return false;"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#testimonials" onclick="scrollTo('testimonials');return false;"><i class="fas fa-quote-left"></i> Testimonials</a></li>
+        <li><a href="#booking" onclick="scrollTo('booking');return false;"><i class="fas fa-calendar"></i> Booking</a></li>
+        <li><a href="#media" onclick="scrollTo('media');return false;"><i class="fas fa-file"></i> Media Kit</a></li>
+        <li><a href="#linktree" onclick="scrollTo('linktree');return false;"><i class="fas fa-link"></i> Links</a></li>
+    </ul>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+    <a href="#home" onclick="scrollTo('hero');toggleMobileMenu();return false;"><i class="fas fa-home"></i> Home</a>
+    <a href="#testimonials" onclick="scrollTo('testimonials');toggleMobileMenu();return false;"><i class="fas fa-quote-left"></i> Testimonials</a>
+    <a href="#booking" onclick="scrollTo('booking');toggleMobileMenu();return false;"><i class="fas fa-calendar"></i> Booking</a>
+    <a href="#media" onclick="scrollTo('media');toggleMobileMenu();return false;"><i class="fas fa-file"></i> Media Kit</a>
+    <a href="#linktree" onclick="scrollTo('linktree');toggleMobileMenu();return false;"><i class="fas fa-link"></i> Links</a>
+    <a href="#" onclick="toggleAdmin();toggleMobileMenu();return false;"><i class="fas fa-cog"></i> Admin</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="hero-layout">
+        <div class="hero-left">
+            <div class="hero-eyebrow"><i class="fas fa-globe"></i> Performance Artist · Europe</div>
+            <h1 class="hero-name">
+                <span>Pablo</span>
+                <span>Talavera</span>
+            </h1>
+            <p class="hero-desc">Physical theatre · Circus arts · Immersive experiences</p>
+            <div class="hero-btns">
+                <button class="btn-pri" onclick="scrollTo('booking')"><i class="fas fa-calendar"></i> Book Now</button>
+                <button class="btn-gh" onclick="scrollTo('linktree')"><i class="fas fa-link"></i> Connect</button>
+            </div>
+        </div>
+        <div class="hero-right-col">
+            <div><div class="hstat-n">8+</div><div class="hstat-l"><i class="fas fa-star"></i> Years</div></div>
+            <div><div class="hstat-n">50+</div><div class="hstat-l"><i class="fas fa-globe"></i> Events</div></div>
+            <div><div class="hstat-n">@echo</div><div class="hstat-l"><i class="fab fa-instagram"></i> Instagram</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-sec" id="testimonials">
+    <div class="testimonials-inner rv">
+        <h2 class="testimonials-title"><i class="fas fa-quote-left"></i> What People Say</h2>
+        <div class="carousel" id="testimonials-carousel">
+            <div class="carousel-item active">
+                <p class="testimonial-text">"Pablo's performance was absolutely mesmerizing. His command of movement and space is unparalleled."</p>
+                <p class="testimonial-author">— Emma Rodriguez, Festival Director</p>
+            </div>
+            <div class="carousel-item">
+                <p class="testimonial-text">"Working with Pablo transformed our event. His energy is infectious and his technical skills are exceptional."</p>
+                <p class="testimonial-author">— Marcus Chen, Event Producer</p>
+            </div>
+            <div class="carousel-item">
+                <p class="testimonial-text">"The workshop was enlightening. Pablo's teaching method is clear, engaging, and deeply rooted in authentic practice."</p>
+                <p class="testimonial-author">— Sarah Johnson, Movement Coach</p>
+            </div>
+            <div class="carousel-item">
+                <p class="testimonial-text">"An incredible performer with genuine passion. Highly recommended for any event or festival."</p>
+                <p class="testimonial-author">— James Wilson, Event Curator</p>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button onclick="prevTestimonial()"><i class="fas fa-chevron-left"></i></button>
+            <button onclick="nextTestimonial()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-sec" id="booking">
+    <div class="booking-inner rv">
+        <h2 class="booking-title"><i class="fas fa-calendar-check"></i> Book a Performance or Workshop</h2>
+        <form class="booking-form" onsubmit="submitBooking(event)">
+            <div class="form-group">
+                <label for="booking-name">Full Name *</label>
+                <input type="text" id="booking-name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="booking-email">Email Address *</label>
+                <input type="email" id="booking-email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="booking-date">Preferred Date *</label>
+                <input type="date" id="booking-date" required>
+            </div>
+            <div class="form-group">
+                <label for="booking-event">Event Type</label>
+                <input type="text" id="booking-event" placeholder="Festival, Corporate, Workshop, etc.">
+            </div>
+            <div class="form-group">
+                <label for="booking-notes">Additional Notes</label>
+                <textarea id="booking-notes" placeholder="Tell us more about your event..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Booking Request</button>
+            <div class="form-success" id="booking-success">✓ Booking request submitted! We'll contact you soon.</div>
+        </form>
+    </div>
+</section>
+
+<!-- MEDIA KIT -->
+<section class="media-kit-sec" id="media">
+    <div class="media-kit-inner">
+        <h2 class="media-kit-title rv"><i class="fas fa-briefcase"></i> Media Kit</h2>
+        <div class="media-kit-grid">
+            <div class="media-card rv d1">
+                <div class="media-icon"><i class="fas fa-images"></i></div>
+                <span class="media-label">High-Res Photos</span>
+                <p style="font-size:.9rem;color:var(--cream);margin-bottom:1.5rem;line-height:1.6;">Professional portfolio images for media and press.</p>
+                <button class="media-btn" onclick="downloadMedia('photos')">Download Pack</button>
+            </div>
+            <div class="media-card rv d2">
+                <div class="media-icon"><i class="fas fa-video"></i></div>
+                <span class="media-label">Video Clips</span>
+                <p style="font-size:.9rem;color:var(--cream);margin-bottom:1.5rem;line-height:1.6;">Performance highlights in HD quality.</p>
+                <button class="media-btn" onclick="downloadMedia('videos')">Download Pack</button>
+            </div>
+            <div class="media-card rv d3">
+                <div class="media-icon"><i class="fas fa-file-pdf"></i></div>
+                <span class="media-label">Press Kit</span>
+                <p style="font-size:.9rem;color:var(--cream);margin-bottom:1.5rem;line-height:1.6;">Biography and official press information.</p>
+                <button class="media-btn" onclick="downloadMedia('press')">Download Kit</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LINKTREE -->
+<section class="linktree-sec" id="linktree">
+    <div class="linktree-inner">
+        <div class="linktree-avatar"><i class="fas fa-user"></i></div>
+        <h1 class="linktree-title rv">Connect with Me</h1>
+        <div class="linktree-subtitle rv d1">Performance Artist · Circus Master</div>
+        <div class="linktree-grid">
+            <a href="https://m.youtube.com/@echo_between" target="_blank" rel="noopener" class="link-card rv d1">
+                <div class="link-ico"><i class="fab fa-youtube"></i></div>
+                <div class="link-content">
+                    <h3>YouTube</h3>
+                    <p>@echo_between</p>
+                </div>
+                <i class="fas fa-arrow-right link-arrow"></i>
+            </a>
+            <a href="https://www.tiktok.com/@echo_between" target="_blank" rel="noopener" class="link-card rv d2">
+                <div class="link-ico"><i class="fab fa-tiktok"></i></div>
+                <div class="link-content">
+                    <h3>TikTok</h3>
+                    <p>@echo_between</p>
+                </div>
+                <i class="fas fa-arrow-right link-arrow"></i>
+            </a>
+            <a href="https://www.instagram.com/echo_between" target="_blank" rel="noopener" class="link-card rv d3">
+                <div class="link-ico"><i class="fab fa-instagram"></i></div>
+                <div class="link-content">
+                    <h3>Instagram</h3>
+                    <p>@echo_between</p>
+                </div>
+                <i class="fas fa-arrow-right link-arrow"></i>
+            </a>
+            <a href="https://www.canva.com/design/DAGf6uP86xM/33xWR0gQr4wwYKmltd0LtQ/edit" target="_blank" rel="noopener" class="link-card rv d4">
+                <div class="link-ico"><i class="fas fa-palette"></i></div>
+                <div class="link-content">
+                    <h3>Design Portfolio</h3>
+                    <p>Canva Showreels</p>
+                </div>
+                <i class="fas fa-arrow-right link-arrow"></i>
+            </a>
+            <a href="https://ko-fi.com/echo_between" target="_blank" rel="noopener" class="link-card rv d5">
+                <div class="link-ico"><i class="fas fa-heart"></i></div>
+                <div class="link-content">
+                    <h3>Support My Work</h3>
+                    <p>Ko-fi Donations</p>
+                </div>
+                <i class="fas fa-arrow-right link-arrow"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel">
+    <button class="admin-btn" onclick="toggleAdmin()" title="Admin Dashboard"><i class="fas fa-cog"></i></button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script>
+'use strict';
+
+/* CURSOR */
+const C = document.getElementById('cur'), CR = document.getElementById('cur-r');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    C.style.left = mx + 'px'; C.style.top = my + 'px';
+});
+requestAnimationFrame(function L() {
+    rx += (mx - rx) * .11; ry += (my - ry) * .11;
+    CR.style.left = rx + 'px'; CR.style.top = ry + 'px';
+    requestAnimationFrame(L);
+});
+
+/* NAVIGATION */
+function toggleMobileMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+}
+
+window.addEventListener('scroll', () => {
+    document.getElementById('mnav').classList.toggle('scrolled', scrollY > 55);
+});
+
+function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+/* TESTIMONIALS CAROUSEL */
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll('.carousel-item');
+
+function showTestimonial(n) {
+    testimonials.forEach(t => t.classList.remove('active'));
+    testimonials[n]?.classList.add('active');
+}
+
+function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+}
+
+function prevTestimonial() {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonial);
+}
+
+setInterval(nextTestimonial, 6000);
+
+/* BOOKING FORM */
+function submitBooking(e) {
+    e.preventDefault();
+    const name = document.getElementById('booking-name').value;
+    const email = document.getElementById('booking-email').value;
+    const date = document.getElementById('booking-date').value;
+    
+    if (!name || !email || !date) return;
+    
+    const bookingData = {
+        name, email, date,
+        eventType: document.getElementById('booking-event').value,
+        notes: document.getElementById('booking-notes').value,
+        timestamp: new Date().toISOString()
+    };
+    
+    localStorage.setItem('booking_' + Date.now(), JSON.stringify(bookingData));
+    document.querySelector('.booking-form').reset();
+    
+    const success = document.getElementById('booking-success');
+    success.classList.add('show');
+    setTimeout(() => success.classList.remove('show'), 3000);
+}
+
+/* MEDIA KIT */
+function downloadMedia(type) {
+    const names = { photos: 'Portfolio-HighRes-Photos.zip', videos: 'Portfolio-Video-Clips.zip', press: 'Press-Kit.pdf' };
+    alert('Media kit: ' + names[type] + '\n\nFor direct access:\npablotalavera089@gmail.com');
+}
+
+/* ADMIN */
+function toggleAdmin() {
+    const pwd = prompt('Admin Password:');
+    if (pwd === 'Pablo-Admin-2025') {
+        alert('✓ Admin access granted!\n\nBookings saved in localStorage.\nUse console: portfolioUtils.exportBookingData()');
+    } else if (pwd) alert('✗ Incorrect password');
+}
+
+/* REVEAL ANIMATIONS */
+const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: .1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* UTILITIES */
+window.portfolioUtils = {
+    getAllBookings: () => {
+        const b = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k.startsWith('booking_')) b.push(JSON.parse(localStorage.getItem(k)));
+        }
+        return b.sort((a, bb) => new Date(bb.timestamp) - new Date(a.timestamp));
+    },
+    exportBookingData: () => {
+        const data = JSON.stringify(window.portfolioUtils.getAllBookings(), null, 2);
+        const blob = new Blob([data], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'booking-data-' + new Date().toISOString().split('T')[0] + '.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+};
+</script>
+</body>
+</html>
