@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Pablo Talavera — Multidisciplinary performance artist. Physical theatre, circus arts, contact staff, stage design and immersive experiences."/>
+  <meta name="author" content="Pablo Talavera"/>
+  <meta property="og:title" content="Pablo Talavera — Artist Portfolio"/>
+  <meta property="og:description" content="Physical theatre · Circus arts · Immersive experiences"/>
+  <meta property="og:type" content="website"/>
+  <title>Pablo Talavera — Artist Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur" aria-hidden="true"></div>
+<div id="cur-r" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ══ MAIN NAV ══ -->
+<nav id="mnav" role="navigation" aria-label="Main navigation">
+  <div class="nav-brand">Pablo Talavera</div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="gp('home');return false;">Home</a></li>
+    <li><a href="#" onclick="gp('home');setTimeout(()=>document.querySelector('.about-sec')?.scrollIntoView({behavior:'smooth'}),120);return false;">About</a></li>
+    <li><a href="#" onclick="gp('home');setTimeout(()=>document.querySelector('.proj-sec')?.scrollIntoView({behavior:'smooth'}),120);return false;">Projects</a></li>
+    <li><a href="#" onclick="gp('home');setTimeout(()=>document.querySelector('.cta-sec')?.scrollIntoView({behavior:'smooth'}),120);return false;">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ PILL NAV ══ -->
+<div id="pnav" role="navigation" aria-label="Section navigation">
+  <button class="pb on"  onclick="gp('home')">Portfolio</button>
+  <button class="pb"     onclick="gp('workshops')">Workshops</button>
+  <button class="pb"     onclick="gp('performance')">Performances</button>
+  <button class="pb"     onclick="gp('showreel')">Showreel</button>
+  <button class="pb"     onclick="gp('mediakit')">Media Kit</button>
+  <button class="pb"     onclick="gp('links')">Links</button>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════════ -->
+<div id="pg-home" class="pg on">
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Hero">
+    <div class="orb orb1" aria-hidden="true"></div>
+    <div class="orb orb2" aria-hidden="true"></div>
+    <div class="hero-layout">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Performance Artist · Europe</div>
+        <h1 class="hero-name">
+          <span class="ln">Pablo</span>
+          <span class="ln">Talavera</span>
+        </h1>
+        <p class="hero-desc">Physical theatre · Circus arts · Immersive experiences</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="document.querySelector('.sched-sec').scrollIntoView({behavior:'smooth'})">
+            Where I'll Be Next
+          </button>
+          <button class="btn-ghost" onclick="document.querySelector('.cta-sec').scrollIntoView({behavior:'smooth'})">
+            Contact
+          </button>
+        </div>
+      </div>
+      <div class="hero-right-col">
+        <div class="hstat">
+          <div class="hstat-n" data-count="8" data-fmt="n">8</div>
+          <div class="hstat-l">Years Experience</div>
+        </div>
+        <div class="h-div" aria-hidden="true"></div>
+        <div class="hstat">
+          <div class="hstat-n" data-count="20" data-fmt="p">20+</div>
+          <div class="hstat-l">Festivals</div>
+        </div>
+        <div class="h-div" aria-hidden="true"></div>
+        <div class="him">
+          <div class="him-h">@echo_between</div>
+          <div class="him-l">Instagram</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="sc-bar"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-sec" aria-label="About">
+    <div class="about-inner">
+      <div class="rl">
+        <div class="about-img-wrap">
+          <img src="assets/images/pablo-about.jpg" alt="Pablo Talavera performing with contact staff"
+               onerror="this.style.background='#b5aca0';this.style.minHeight='400px'"/>
+          <div class="about-img-tag">Pablo Talavera</div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow rv">About</div>
+        <h2 class="about-heading rv d1">Pablo<br/>Talavera</h2>
+        <p class="about-body rv d2">
+          Versatile artist merging movement, space, and light into immersive experiences.
+          8 years in circus arts, physical theatre, and stage design —
+          from intimate performances to large-scale festivals.
+        </p>
+        <div class="about-pills rv d3">
+          <span class="about-pill">Physical Theatre</span>
+          <span class="about-pill">Contact Staff</span>
+          <span class="about-pill">Fire Performance</span>
+          <span class="about-pill">Stage Design</span>
+          <span class="about-pill">Contact Improv</span>
+          <span class="about-pill">Flying Pole</span>
+        </div>
+        <div class="about-sig rv d4">@echo_between</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-sec" aria-label="Disciplines">
+    <div class="skills-inner">
+      <div class="eyebrow rv">Disciplines</div>
+      <div class="skills-grid">
+        <div class="skill-block rv d1">
+          <div class="skill-ico" aria-hidden="true">🎭</div>
+          <div class="skill-title">Performance</div>
+          <div class="skill-items">
+            <div class="skill-item">Physical Theatre</div>
+            <div class="skill-item">Street &amp; Stage</div>
+            <div class="skill-item">Immersive Theatre</div>
+          </div>
+        </div>
+        <div class="skill-block rv d2">
+          <div class="skill-ico" aria-hidden="true">🥢</div>
+          <div class="skill-title">Circus</div>
+          <div class="skill-items">
+            <div class="skill-item">Contact Staff</div>
+            <div class="skill-item">Fire Performance</div>
+            <div class="skill-item">Flying Pole</div>
+          </div>
+        </div>
+        <div class="skill-block rv d3">
+          <div class="skill-ico" aria-hidden="true">🌊</div>
+          <div class="skill-title">Movement</div>
+          <div class="skill-items">
+            <div class="skill-item">Contact Improvisation</div>
+            <div class="skill-item">Partner Acrobatics</div>
+            <div class="skill-item">Contemporary Dance</div>
+          </div>
+        </div>
+        <div class="skill-block rv d4">
+          <div class="skill-ico" aria-hidden="true">🏗️</div>
+          <div class="skill-title">Space</div>
+          <div class="skill-items">
+            <div class="skill-item">Stage Design</div>
+            <div class="skill-item">Light Installations</div>
+            <div class="skill-item">Festival Architecture</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="sched-sec" aria-label="Schedule">
+    <div class="sched-inner">
+      <div class="sched-top rv">
+        <div>
+          <div class="eyebrow">On the Road</div>
+          <h2 class="sched-heading">Where I'll Be Next</h2>
+        </div>
+        <div class="sched-note">Updated as dates are confirmed</div>
+      </div>
+      <!-- Rendered by JS from SCHEDULE array in main.js -->
+      <div class="sched-list rv d1" id="sched-list"></div>
+      <div class="sched-cta rv d2">
+        <button class="btn-primary" onclick="document.querySelector('.cta-sec').scrollIntoView({behavior:'smooth'})">
+          Book for Your Event
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT SHOWCASE -->
+  <section class="proj-sec" aria-label="Project showcase">
+    <div class="proj-inner">
+      <div class="proj-header rv">
+        <span>Last Project · Feb 2025 · Pai, Thailand</span>
+        <span style="font-style:italic;">@faijai.flowfest</span>
+      </div>
+      <div class="proj-grid">
+        <div>
+          <h2 class="proj-title rv">Fai Jai<br/>Flow Festival</h2>
+          <p class="proj-desc rv d1">
+            Fire safety coordination and volunteer management
+            for a dedicated backstage fire performance space.
+            Structured protocols, zero incidents.
+          </p>
+        </div>
+        <div class="proj-stats rv d2">
+          <div>
+            <div class="proj-stat-n">350</div>
+            <div class="proj-stat-l">Visitors</div>
+          </div>
+          <div>
+            <div class="proj-stat-n">12</div>
+            <div class="proj-stat-l">Volunteers</div>
+          </div>
+          <div>
+            <div class="proj-stat-n">0</div>
+            <div class="proj-stat-l">Incidents</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi-sec" aria-label="Testimonials">
+    <div class="testi-inner">
+      <div class="eyebrow rv">What People Say</div>
+      <h2 class="testi-title rv d1">Testimonials</h2>
+      <div class="testi-track-wrap">
+        <div class="testi-track" id="testi-track"></div>
+        <button class="testi-nav testi-prev" onclick="testiPrev()" aria-label="Previous">‹</button>
+        <button class="testi-nav testi-next" onclick="testiNext()" aria-label="Next">›</button>
+      </div>
+      <div class="testi-dots" id="testi-dots"></div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking-sec" aria-label="Booking form">
+    <div class="booking-inner">
+      <div>
+        <div class="eyebrow rv">Work With Me</div>
+        <h2 class="booking-title rv d1">Book Pablo</h2>
+        <p class="booking-sub rv d2">Fill in your details and I'll get back to you within 48 hours. All submissions are saved locally so nothing gets lost.</p>
+      </div>
+      <div class="booking-form-wrap rv d1">
+        <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
+          <div class="bf-row">
+            <div class="bf-field">
+              <label class="bf-label" for="bf-name">Name</label>
+              <input class="bf-input" id="bf-name" type="text" placeholder="Your name" required/>
+            </div>
+            <div class="bf-field">
+              <label class="bf-label" for="bf-email">Email</label>
+              <input class="bf-input" id="bf-email" type="email" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="bf-row">
+            <div class="bf-field">
+              <label class="bf-label" for="bf-type">Type of booking</label>
+              <select class="bf-input bf-select" id="bf-type" required>
+                <option value="" disabled selected>Select…</option>
+                <option>Performance</option>
+                <option>Workshop</option>
+                <option>Fire Safety Coordination</option>
+                <option>Stage Design</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="bf-field">
+              <label class="bf-label" for="bf-date">Proposed date</label>
+              <input class="bf-input" id="bf-date" type="date"/>
+            </div>
+          </div>
+          <div class="bf-field">
+            <label class="bf-label" for="bf-location">Location / Event</label>
+            <input class="bf-input" id="bf-location" type="text" placeholder="City, festival, venue…"/>
+          </div>
+          <div class="bf-field">
+            <label class="bf-label" for="bf-msg">Message</label>
+            <textarea class="bf-input bf-textarea" id="bf-msg" rows="4" placeholder="Tell me about your project, audience size, duration, budget…"></textarea>
+          </div>
+          <div class="bf-actions">
+            <button type="submit" class="btn-primary">Send Booking Request</button>
+            <button type="button" class="btn-ghost" onclick="viewBookings()">View saved ({{ n }})</button>
+          </div>
+          <div class="bf-success" id="bf-success">
+            ✓ Request saved! I'll be in touch within 48 hours. Check your email at <span id="bf-confirm-email"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="cta-sec" aria-label="Contact">
+    <div class="cta-inner">
+      <div class="rv">
+        <div class="eyebrow cta-pre">Get in Touch</div>
+        <h2 class="cta-title">Let's work<br/>together</h2>
+        <p class="cta-sub">Performances · Workshops · Festival bookings · Stage design</p>
+      </div>
+      <div class="cta-right rv d2">
+        <a href="mailto:pablotalavera089@gmail.com">
+          <button class="btn-primary">Send an Email</button>
+        </a>
+        <a href="https://instagram.com/echo_between" target="_blank" rel="noopener noreferrer">
+          <button class="btn-ghost">@echo_between</button>
+        </a>
+        <a class="cta-email" href="mailto:pablotalavera089@gmail.com">
+          pablotalavera089@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="cls" aria-hidden="true">
+    <div class="cls-bg"></div>
+    <div class="cls-in">
+      <div class="cls-vl rv"></div>
+      <h2 class="cls-txt rv d1">Look Forward<br/>to Meeting You</h2>
+    </div>
+    <div class="cls-foot">
+      <span class="cls-foot-t" style="font-style:italic;">Artist Portfolio</span>
+      <div class="cls-foot-line"></div>
+      <span class="cls-foot-t">@echo_between</span>
+    </div>
+  </div>
+
+</div><!-- /pg-home -->
+
+<!-- ══════════════════════════════════════════
+     PAGE: WORKSHOPS
+══════════════════════════════════════════ -->
+<div id="pg-workshops" class="pg">
+  <div class="ws-page">
+    <div class="ws-hero max-w">
+      <div class="eyebrow">Teaching &amp; Training</div>
+      <h1 class="ws-hero-title">Workshop<br/>Portfolio</h1>
+      <p class="ws-hero-sub">
+        Seven practical workshops rooted in 8 years of professional circus,
+        theatre, and movement practice. Click any card for the full curriculum.
+      </p>
+    </div>
+    <!-- Rendered by JS from WORKSHOPS array -->
+    <div class="ws-grid" id="ws-grid"></div>
+  </div>
+</div>
+
+<!-- Workshop modal -->
+<div class="wmo" id="wmo" onclick="overlayClick(event)" role="dialog" aria-modal="true" aria-label="Workshop detail">
+  <div class="wm">
+    <div class="wmt">
+      <button class="wm-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div class="wm-cat"  id="m-cat"></div>
+      <div class="wm-title" id="m-title"></div>
+      <div class="wm-sub"  id="m-sub"></div>
+    </div>
+    <div class="wmb" id="m-body"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE: PERFORMANCES
+══════════════════════════════════════════ -->
+<div id="pg-performance" class="pg">
+  <div class="perf-page">
+    <div class="perf-hero max-w">
+      <div class="eyebrow">How I Work</div>
+      <h1 class="perf-hero-title">Performance<br/>Setups</h1>
+      <p class="perf-hero-sub">
+        Technical specifications, requirements, and formats
+        for each type of performance and service.
+      </p>
+    </div>
+    <!-- Rendered by JS from SETUPS array -->
+    <div class="perf-cards" id="perf-cards"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE: SHOWREEL
+══════════════════════════════════════════ -->
+<div id="pg-showreel" class="pg">
+  <div class="reel-page">
+
+    <div class="reel-hero max-w">
+      <div class="eyebrow">Video Work</div>
+      <h1 class="reel-hero-title">Showreel &amp;<br/>Video Archive</h1>
+      <p class="reel-hero-sub">
+        Paste a YouTube or Vimeo link to add your videos.
+        The first video added becomes the featured reel.
+      </p>
+    </div>
+
+    <div class="reel-feat">
+      <div class="reel-feat-lbl">Featured Showreel</div>
+      <div class="vembed" id="vfeat">
+        <div class="vembed-ph">
+          <button class="vplay" onclick="promptFeatured()" aria-label="Set featured video">▶</button>
+          <p>Click to set your featured video, or paste a link below</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reel-add">
+      <div class="reel-add-lbl">Add a YouTube or Vimeo video</div>
+      <div class="reel-row">
+        <input class="ri" id="vurl"   type="url"  placeholder="https://www.youtube.com/watch?v=..." aria-label="Video URL"/>
+        <input class="ri" id="vtitle" type="text" placeholder="Title (optional)" style="max-width:200px;" aria-label="Video title"/>
+        <button class="radd" onclick="addVideo()">+ Add</button>
+      </div>
+    </div>
+
+    <div class="reel-grid-sec">
+      <div class="rgrid-hdr">
+        <span>All Videos</span>
+        <span id="vcnt">0 videos</span>
+      </div>
+      <div class="rgrid" id="rgrid">
+        <div style="grid-column:1/-1;padding:2.5rem 0;text-align:center;">
+          <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(237,232,222,.2);">
+            Add videos above to populate this grid
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reel-ph-sec">
+      <div class="reel-ph-lbl">Performance Archive</div>
+      <div class="reel-ph-row">
+        <div class="ph">
+          <div class="pno"></div>
+          <div class="psc">
+            <img src="assets/images/perf-fire.jpg" alt="Fire performance"
+                 onerror="this.outerHTML='<div class=pph><div class=pio>🔥</div><div class=plb>Fire</div></div>'"/>
+          </div>
+        </div>
+        <div class="ph">
+          <div class="pno"></div>
+          <div class="psc">
+            <img src="assets/images/perf-theater.jpg" alt="Theater performance"
+                 onerror="this.outerHTML='<div class=pph><div class=pio>🎭</div><div class=plb>Theater</div></div>'"/>
+          </div>
+        </div>
+        <div class="ph">
+          <div class="pno"></div>
+          <div class="psc">
+            <img src="assets/images/perf-light.jpg" alt="Light installation"
+                 onerror="this.outerHTML='<div class=pph><div class=pio>✨</div><div class=plb>Light</div></div>'"/>
+          </div>
+        </div>
+        <div class="ph">
+          <div class="pno"></div>
+          <div class="psc">
+            <img src="assets/images/perf-circus.jpg" alt="Circus performance"
+                 onerror="this.outerHTML='<div class=pph><div class=pio>🎪</div><div class=plb>Circus</div></div>'"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /pg-showreel -->
+
+<!-- ══════════════════════════════════════════
+     PAGE: MEDIA KIT
+══════════════════════════════════════════ -->
+<div id="pg-mediakit" class="pg">
+  <div class="mk-page">
+    <div class="mk-hero max-w">
+      <div class="eyebrow">Press &amp; Media</div>
+      <h1 class="mk-hero-title">Media Kit</h1>
+      <p class="mk-hero-sub">Everything you need to feature, book, or write about Pablo Talavera. Download assets, bios, and technical riders below.</p>
+    </div>
+    <div class="mk-grid max-w" id="mk-grid">
+
+      <!-- COL 1: BIO & PRESS -->
+      <div class="mk-col">
+        <div class="mk-col-head">
+          <div class="mk-col-ico">📝</div>
+          <div class="mk-col-title">Biography</div>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Short Bio (50 words)</div>
+          <div class="mk-item-text" id="bio-short">Pablo Talavera is a multidisciplinary performance artist specialising in physical theatre, circus arts, and immersive experiences. With 8 years of professional practice across Europe and Asia, he merges movement, fire, and space design to create unforgettable live events.</div>
+          <button class="mk-copy" onclick="copyText('bio-short')">Copy</button>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Full Bio (150 words)</div>
+          <div class="mk-item-text" id="bio-full">Pablo Talavera is a European-based performance artist whose work sits at the intersection of physical theatre, contemporary circus, and immersive experience design. His practice draws on 8 years of professional performance, spanning contact staff juggling, fire performance, flying pole, partner acrobatics, and contact improvisation.<br/><br/>As a stage and space designer, Pablo has built sets and festival architectures for over 20 events across Europe — from intimate wellness retreats to large-scale festival main stages. His teaching practice includes 7 specialist workshops covering physical preparation, spatial awareness, partner movement, acrobatics, and flow arts.<br/><br/>Committed to the idea that performance can dissolve the boundary between artist and audience, Pablo brings a poetic, precise, and occasionally absurd energy to every project he takes on.</div>
+          <button class="mk-copy" onclick="copyText('bio-full')">Copy</button>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Key Facts</div>
+          <ul class="mk-list">
+            <li>8 years professional experience</li>
+            <li>20+ festivals across Europe &amp; Asia</li>
+            <li>7 specialist workshops</li>
+            <li>Fire safety trained &amp; certified</li>
+            <li>Based in Europe, available internationally</li>
+            <li>Languages: German, English, Spanish</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- COL 2: TECHNICAL -->
+      <div class="mk-col">
+        <div class="mk-col-head">
+          <div class="mk-col-ico">⚙️</div>
+          <div class="mk-col-title">Technical Rider</div>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Fire Performance Requirements</div>
+          <ul class="mk-list">
+            <li>Min. 8×8m performance area, clear of audience</li>
+            <li>2× fire safety officers on standby</li>
+            <li>Fire blanket + CO₂ extinguisher on site</li>
+            <li>Dipping bucket (paraffin) provided by performer</li>
+            <li>Outdoor only — wind &lt; 5 Beaufort</li>
+            <li>45 min setup + 20 min safety briefing</li>
+          </ul>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Workshop Space Requirements</div>
+          <ul class="mk-list">
+            <li>Min. 8×8m sprung or matted floor</li>
+            <li>No fixed furniture or obstructions</li>
+            <li>Sound system (optional but preferred)</li>
+            <li>Changing room access</li>
+            <li>Max 16 participants for acro workshops</li>
+          </ul>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Stage Performance</div>
+          <ul class="mk-list">
+            <li>Min. 6×6m clear stage area</li>
+            <li>Side-lighting preferred</li>
+            <li>Sound system: stereo min, aux input required</li>
+            <li>30 min pre-show access for warm-up</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- COL 3: DOWNLOADS & CONTACT -->
+      <div class="mk-col">
+        <div class="mk-col-head">
+          <div class="mk-col-ico">📦</div>
+          <div class="mk-col-title">Downloads &amp; Contact</div>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Press Contact</div>
+          <ul class="mk-list">
+            <li>Email: <a href="mailto:pablotalavera089@gmail.com" style="color:var(--gold)">pablotalavera089@gmail.com</a></li>
+            <li>Instagram: <a href="https://instagram.com/echo_between" target="_blank" style="color:var(--gold)">@echo_between</a></li>
+            <li>Response time: within 48 hours</li>
+          </ul>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Available For</div>
+          <div class="mk-tags">
+            <span class="tag">Festivals</span>
+            <span class="tag">Corporate Events</span>
+            <span class="tag">Theater Productions</span>
+            <span class="tag">Workshops</span>
+            <span class="tag">Residencies</span>
+            <span class="tag">Film & Photo</span>
+            <span class="tag">Stage Design</span>
+            <span class="tag">Fire Safety</span>
+          </div>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Download Pack</div>
+          <p style="font-size:.85rem;color:rgba(237,232,222,.5);line-height:1.65;margin-bottom:1rem;">
+            High-res photos, full bio, and technical rider available on request via email.
+          </p>
+          <a href="mailto:pablotalavera089@gmail.com?subject=Media Kit Request&body=Hi Pablo, I'd like to request your full media kit including high-res photos.">
+            <button class="btn-primary" style="width:100%;">Request Full Media Kit</button>
+          </a>
+        </div>
+        <div class="mk-item">
+          <div class="mk-item-label">Quick Stats</div>
+          <div class="mk-stats-row">
+            <div class="mk-stat"><div class="mk-stat-n">8</div><div class="mk-stat-l">Years</div></div>
+            <div class="mk-stat"><div class="mk-stat-n">20+</div><div class="mk-stat-l">Festivals</div></div>
+            <div class="mk-stat"><div class="mk-stat-n">7</div><div class="mk-stat-l">Workshops</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /pg-mediakit -->
+
+<!-- ══════════════════════════════════════════
+     PAGE: LINKS (Linktree style)
+══════════════════════════════════════════ -->
+<div id="pg-links" class="pg">
+  <div class="links-page">
+    <div class="links-hero">
+      <div class="links-avatar">
+        <img src="assets/images/pablo-about.jpg" alt="Pablo Talavera"
+             onerror="this.style.background='#5c4a38'"/>
+      </div>
+      <h1 class="links-name">Pablo Talavera</h1>
+      <p class="links-bio">Performance Artist · Circus Arts · Physical Theatre</p>
+      <div class="links-handle">@echo_between</div>
+    </div>
+    <div class="links-list" id="links-list"></div>
+    <div class="links-footer">
+      <span>© Pablo Talavera 2025</span>
+      <span>pablotalavera089@gmail.com</span>
+    </div>
+  </div>
+</div><!-- /pg-links -->
+
+<!-- Bookings saved modal -->
+<div class="bookings-modal-overlay" id="bookings-modal" onclick="if(event.target===this)closeBookings()">
+  <div class="bookings-modal">
+    <div class="bm-head">
+      <h3>Saved Booking Requests</h3>
+      <button class="bm-close" onclick="closeBookings()">✕</button>
+    </div>
+    <div class="bm-body" id="bm-list"></div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
