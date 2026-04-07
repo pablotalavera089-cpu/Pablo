@@ -3743,6 +3743,11 @@ function importData() {
     `).join('');
   }
 
+  function mountDashboard() {
+    root.innerHTML = dashboardSkeleton();
+    renderDashboard();
+  }
+
   async function loginAdmin() {
     const input = document.getElementById('admin-pass');
     const raw = input?.value || '';
@@ -3754,7 +3759,8 @@ function importData() {
     sessionStorage.setItem(ADMIN_SESSION_KEY, '1');
     state.authed = true;
     setIdleTimer();
-    renderDashboard();
+    openRoot();
+    mountDashboard();
   }
 
   function logoutAdmin(silent = false) {
@@ -3762,18 +3768,18 @@ function importData() {
     state.authed = false;
     clearTimeout(state.idleTimer);
     if (silent) return;
+    openRoot();
     showGate();
   }
 
   function toggleAdminOverlay() {
     normalizeArrays();
+    openRoot();
     if (!state.authed) {
-      openRoot();
       showGate();
       return;
     }
-    openRoot();
-    renderDashboard();
+    mountDashboard();
   }
 
   function closeAdmin() {
