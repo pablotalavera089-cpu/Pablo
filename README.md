@@ -2,66 +2,58 @@
 
 Personal portfolio website for Pablo Talavera, multidisciplinary performance artist.
 
-**Live site:** `https://[your-username].github.io/pablo-portfolio`
+## What works
 
-## Features
+- Single-page portfolio with workshops, performances, gallery, media, and links
+- Full-screen admin dashboard with login overlay
+- Add, edit, delete, and reorder for gallery, reels, downloads, schedule, and links
+- Editable site text and buttons
+- Media previews for images and embedded reels
+- Gallery persistence via `localStorage`
+- Schedule persistence via `localStorage`
+- Downloads and reels persistence via `localStorage`
+- Export/import for all content, including settings and links
 
-- Single-page application with four sections: Portfolio · Workshops · Performances · Showreel
-- Floating pill navigation
-- Scroll-triggered animations
-- Live schedule section
-- Embeddable YouTube / Vimeo showreel
-- Fully responsive
-- Zero dependencies — pure HTML, CSS, JavaScript
+## Admin password
 
-## Project Structure
+The admin dashboard uses a client-side password check with a SHA-256 hash and a browser session flag.
 
-```
-pablo-portfolio/
-├── index.html              ← Main entry point
-├── assets/
-│   ├── css/
-│   │   └── style.css       ← All styles
-│   ├── js/
-│   │   └── main.js         ← All JavaScript
-│   └── images/             ← Place your photos here
-├── .github/
-│   └── workflows/
-│       └── deploy.yml      ← Auto-deploy to GitHub Pages
-└── README.md
-```
+Current password in this build:
+`PabloAdmin2026!`
 
-## Updating Your Schedule
+For better protection, change the password hash inside `index.html` after generating your own hash.
 
-Open `assets/js/main.js` and find the `SCHEDULE` array near the top. Add, remove or change events:
+## Media / Press kit
 
-```js
-const SCHEDULE = [
-  {
-    day: '03', month: 'Feb 2025',
-    event: 'Fai Jai Flow Festival',
-    location: 'Pai, Thailand',
-    type: 'fire', label: 'Fire Safety',
-    past: true
-  },
-  // Add more events here ...
-];
-```
+Use Google Drive links for your press kit files. In the admin dashboard, add:
 
-## Deployment (GitHub Pages)
+- a title like `Press Kit PDF`
+- your Google Drive file link
+- a button label like `Download PDF`
 
-1. Push this repository to GitHub
-2. Go to **Settings → Pages**
-3. Set source: **Deploy from branch → main → / (root)**
-4. Your site goes live at `https://[username].github.io/[repo-name]`
+The site turns Google Drive file links into download buttons.
 
-The included GitHub Actions workflow (`.github/workflows/deploy.yml`) also auto-deploys on every push to `main`.
+## Important note
 
-## Adding Images
+GitHub Pages is a static hosting service that publishes HTML, CSS, and JavaScript straight from your repository. That means the admin overlay is a strong front-end lock, but it is not the same as a private server-side login.
 
-Place your photos in `assets/images/` and reference them in `index.html`:
-```html
-<img src="assets/images/your-photo.jpg" alt="Description"/>
+For real private access, put the admin area behind a separate protection layer such as Cloudflare Access, or move the admin CMS to a backend service.
+
+## Deployment
+
+1. Upload the folder to GitHub.
+2. In GitHub, go to **Settings → Pages**.
+3. Set source to **Deploy from branch → main → / (root)**.
+4. Make sure your Google Drive files are shared as **Anyone with the link can view**.
+
+## Password hash update
+
+Generate a new SHA-256 hash for your chosen password and replace `ADMIN_PASSWORD_HASH` in `index.html`.
+
+Example with Node.js:
+
+```bash
+node -e "const crypto=require('crypto'); console.log(crypto.createHash('sha256').update('YOUR_PASSWORD').digest('hex'))"
 ```
 
 ## Contact
