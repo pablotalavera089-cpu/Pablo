@@ -1,62 +1,41 @@
-# Pablo Talavera — Artist Portfolio
+# Pablo & Kaida — Duo Portfolio
 
-Personal portfolio website for Pablo Talavera, multidisciplinary performance artist.
+A bright, modern duo portfolio with:
+- full-screen admin overlay
+- password gate
+- editable site copy
+- add/edit/delete/reorder for about, workshops, performances, gallery, reels, downloads, and schedule
+- gallery slideshow and reels together
+- contact page with a working email draft form
+- localStorage persistence plus export/import JSON
 
-## What works
+## How to use
 
-- Single-page portfolio with workshops, performances, gallery, media, and links
-- Full-screen admin dashboard with login overlay
-- Add, edit, delete, and reorder for gallery, reels, downloads, schedule, and links
-- Editable site text and buttons
-- Media previews for images and embedded reels
-- Gallery persistence via `localStorage`
-- Schedule persistence via `localStorage`
-- Downloads and reels persistence via `localStorage`
-- Export/import for all content, including settings and links
+1. Upload the files to GitHub.
+2. Turn on GitHub Pages.
+3. Open the site and click **Login**.
+4. Use the admin password from `main.js`.
 
 ## Admin password
 
-The admin dashboard uses a client-side password check with a SHA-256 hash and a browser session flag.
-
 Current password in this build:
-`PabloAdmin2026!`
+`PabloKaida2026!`
 
-For better protection, change the password hash inside `index.html` after generating your own hash.
+The password is stored as a SHA-256 hash in `main.js`. To change it, generate a new SHA-256 hash and replace `ADMIN_PASSWORD_HASH`.
 
-## Media / Press kit
-
-Use Google Drive links for your press kit files. In the admin dashboard, add:
-
-- a title like `Press Kit PDF`
-- your Google Drive file link
-- a button label like `Download PDF`
-
-The site turns Google Drive file links into download buttons.
-
-## Important note
-
-GitHub Pages is a static hosting service that publishes HTML, CSS, and JavaScript straight from your repository. That means the admin overlay is a strong front-end lock, but it is not the same as a private server-side login.
-
-For real private access, put the admin area behind a separate protection layer such as Cloudflare Access, or move the admin CMS to a backend service.
-
-## Deployment
-
-1. Upload the folder to GitHub.
-2. In GitHub, go to **Settings → Pages**.
-3. Set source to **Deploy from branch → main → / (root)**.
-4. Make sure your Google Drive files are shared as **Anyone with the link can view**.
-
-## Password hash update
-
-Generate a new SHA-256 hash for your chosen password and replace `ADMIN_PASSWORD_HASH` in `index.html`.
-
-Example with Node.js:
-
+Example:
 ```bash
 node -e "const crypto=require('crypto'); console.log(crypto.createHash('sha256').update('YOUR_PASSWORD').digest('hex'))"
 ```
 
-## Contact
+## Important note
 
-**Email:** pablotalavera089@gmail.com  
-**Instagram:** [@echo_between](https://instagram.com/echo_between)
+This admin dashboard is a front-end overlay for GitHub Pages. It is convenient for one-device editing and browser-saved content, but it is not the same as a server-side private CMS. For real multi-device protection, you would add Cloudflare Access or a backend.
+
+## Contact form
+
+The contact form opens an email draft, so it works on static hosting without extra services. If you later want direct sending, connect Formspree, Netlify Forms, or a custom backend.
+
+## Google Drive downloads
+
+Add your Drive links in the Media / Press section. Make sure the file sharing setting is **Anyone with the link can view**.
