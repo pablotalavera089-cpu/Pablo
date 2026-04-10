@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Kaidablo — Kaida & Pablo. Fire performance, martial arts, contact dance, acrobatics and workshops. Available for festivals, events and residencies worldwide."/>
+<meta property="og:title" content="Kaidablo — Kaida & Pablo Talavera"/>
+<meta property="og:description" content="Fire · Dance · Martial Arts · Acrobatics. A living dialogue between two bodies."/>
+<meta property="og:image" content="https://res.cloudinary.com/dol2caucl/image/upload/v1775277979/20260212-fof-004_bfxfoh.jpg"/>
+<title>Kaidablo — Kaida & Pablo | Fire · Dance · Acrobatics</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+/* ======================================================
+   KAIDABLO DUO — MODERN BRIGHT DESIGN
+   ====================================================== */
+:root{
+  --white:#ffffff;
+  --off:#F8F7F5;
+  --light:#F0EDE8;
+  --border:#E8E4DE;
+  --border2:#D8D2CA;
+  --ink:#111010;
+  --char:#2A2825;
+  --mid:#6B6560;
+  --dust:#9E9890;
+  --red:#C0392B;
+  --red2:#E74C3C;
+  --red-pale:#FDF1F0;
+  --red-pale2:#FAE5E3;
+  --gold:#C49A28;
+  --gold-pale:#FDF8EE;
+  --blue:#2980B9;
+  --green:#27AE60;
+  --tr:all .22s cubic-bezier(.16,1,.3,1);
+  --r:14px;
+  --sh:0 2px 20px rgba(0,0,0,.07);
+  --sh2:0 8px 40px rgba(0,0,0,.1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Outfit',sans-serif;background:var(--off);color:var(--ink);overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;line-height:1.6}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:none;border:none;transition:var(--tr)}
+h1,h2,h3,h4,h5{line-height:1.1}
+
+/* ---- CURSOR ---- */
+#cur{position:fixed;width:7px;height:7px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
+#cur-r{position:fixed;width:30px;height:30px;border:1.5px solid rgba(192,57,43,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+
+/* ---- NAVBAR ---- */
+#mnav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s,box-shadow .4s;background:transparent}
+#mnav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border)}
+.nav-brand{font-family:'DM Serif Display',serif;font-size:1.4rem;letter-spacing:-.01em;color:var(--ink);font-style:italic}
+.nav-brand em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{font-size:.72rem;letter-spacing:.08em;font-weight:500;text-transform:uppercase;color:var(--mid);transition:color .2s;cursor:none}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.act{color:var(--red)}
+.nav-cta{background:var(--red);color:#fff!important;padding:.55rem 1.3rem;border-radius:999px;font-weight:600!important;transition:var(--tr)!important}
+.nav-cta:hover{background:var(--char)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;color:var(--ink);font-size:1.3rem;cursor:none;padding:.4rem;width:44px;height:44px;align-items:center;justify-content:center}
+
+/* mobile slide-in nav */
+.mobile-nav{position:fixed;top:0;right:-100%;width:300px;height:100vh;background:#fff;border-left:1px solid var(--border);z-index:600;transition:right .35s cubic-bezier(.16,1,.3,1);overflow-y:auto;padding-top:5rem;box-shadow:var(--sh2)}
+.mobile-nav.open{right:0}
+.mobile-nav a,.mobile-nav button{display:flex;align-items:center;gap:.8rem;width:100%;padding:1.1rem 2rem;color:var(--char);border:none;background:none;text-align:left;font-size:.9rem;font-weight:500;border-bottom:1px solid var(--border);transition:var(--tr);cursor:none;font-family:inherit}
+.mobile-nav a:hover,.mobile-nav button:hover{background:var(--red-pale);color:var(--red);padding-left:2.4rem}
+.mobile-close{position:absolute;top:1rem;right:1.5rem;background:none;border:none;color:var(--mid);font-size:1.2rem;cursor:none;padding:.5rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+
+/* pill nav */
+#pnav{position:fixed;top:4.5rem;left:50%;transform:translateX(-50%);z-index:480;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:999px;padding:.35rem .45rem;display:flex;gap:.15rem;box-shadow:var(--sh)}
+.pb{font-family:'DM Mono',monospace;font-size:.52rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mid);padding:.3rem .8rem;border-radius:999px;border:none;background:transparent;cursor:none;white-space:nowrap;font-weight:500;transition:var(--tr)}
+.pb:hover{color:var(--ink);background:var(--light)}
+.pb.on{background:var(--red);color:#fff}
+
+/* ---- PAGES ---- */
+.pg{display:none}
+.pg.on{display:block;animation:pgIn .45s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes pgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---- REVEAL ---- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.15s}.d2{transition-delay:.25s}.d3{transition-delay:.35s}.d4{transition-delay:.45s}.d5{transition-delay:.55s}
+
+/* ---- SHARED UTILS ---- */
+.wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem}
+.sec{padding:6rem 0}
+.sec-sm{padding:4rem 0}
+.sec-dark{background:var(--ink);color:#fff}
+.sec-light{background:var(--light)}
+.sec-white{background:#fff}
+.sec-red{background:var(--red)}
+.chip{display:inline-flex;align-items:center;gap:.4rem;font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border);color:var(--mid);padding:.28rem .75rem;border-radius:999px;background:#fff}
+.chip-red{border-color:rgba(192,57,43,.3);color:var(--red);background:var(--red-pale)}
+.chip-gold{border-color:rgba(196,154,40,.3);color:var(--gold);background:var(--gold-pale)}
+.chip-dark{border-color:rgba(42,40,37,.25);color:var(--char);background:var(--light)}
+.label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.label::before{content:'';display:block;width:14px;height:1px;background:var(--red)}
+.h-xl{font-family:'DM Serif Display',serif;font-size:clamp(3.5rem,7vw,7rem);line-height:.9;letter-spacing:-.02em;color:var(--ink)}
+.h-xl em{font-style:italic;color:var(--red)}
+.h-lg{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,5vw,4rem);line-height:.95;letter-spacing:-.02em;color:var(--ink)}
+.h-lg em{font-style:italic;color:var(--red)}
+.h-md{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.1;color:var(--ink)}
+.h-sm{font-family:'DM Serif Display',serif;font-size:1.2rem;line-height:1.2;color:var(--ink)}
+.body{font-size:.98rem;line-height:1.85;color:var(--mid);font-weight:400}
+.body-sm{font-size:.85rem;line-height:1.75;color:var(--mid)}
+.invert .h-xl,.invert .h-lg,.invert .h-md,.invert .h-sm{color:#fff}
+.invert .body,.invert .body-sm{color:rgba(255,255,255,.65)}
+.invert .label{color:rgba(255,255,255,.5)}
+.invert .label::before{background:rgba(255,255,255,.5)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.85rem 2rem;border-radius:999px;border:none;cursor:none;transition:var(--tr);white-space:nowrap}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#A93226;transform:translateY(-2px);box-shadow:0 4px 20px rgba(192,57,43,.3)}
+.btn-white{background:#fff;color:var(--ink);box-shadow:var(--sh)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:var(--sh2)}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--border2)}
+.btn-outline:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-outline-red{background:transparent;color:var(--red);border:1.5px solid rgba(192,57,43,.35)}
+.btn-outline-red:hover{background:var(--red-pale2);border-color:var(--red)}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+#hero{min-height:100vh;background:var(--off);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:8rem}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.5}
+.hero-accent{position:absolute;top:-20%;right:-5%;width:55%;aspect-ratio:1;background:radial-gradient(circle,rgba(192,57,43,.07) 0%,transparent 65%);pointer-events:none}
+.hero-accent2{position:absolute;bottom:-10%;left:-10%;width:40%;aspect-ratio:1;background:radial-gradient(circle,rgba(196,154,40,.05) 0%,transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;width:100%;max-width:1240px;margin:0 auto;padding:0 2.5rem 5rem}
+.hero-tag{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:.6rem;margin-bottom:1.6rem;opacity:0;animation:slIn .7s .2s forwards}
+.hero-tag::before{content:'';display:block;width:20px;height:1px;background:var(--red)}
+.hero-title{font-family:'DM Serif Display',serif;font-size:clamp(4rem,8vw,7.5rem);line-height:.88;letter-spacing:-.03em;color:var(--ink);overflow:hidden;margin-bottom:1.2rem}
+.hero-title span{display:block;opacity:0;animation:slIn .9s forwards}
+.hero-title span:nth-child(1){animation-delay:.3s}
+.hero-title span:nth-child(2){animation-delay:.42s;color:var(--red);font-style:italic}
+.hero-sub{font-size:1.05rem;line-height:1.8;color:var(--mid);max-width:400px;opacity:0;animation:slIn .8s .7s forwards;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;opacity:0;animation:fdI .8s 1s forwards}
+.hero-right{display:flex;flex-direction:column;gap:1.5rem;opacity:0;animation:fdI .9s .55s forwards}
+.hero-img-pair{position:relative;height:420px}
+.hero-img-main{position:absolute;right:0;top:0;width:70%;aspect-ratio:.75;border-radius:20px;overflow:hidden;box-shadow:var(--sh2);background:var(--light)}
+.hero-img-main img{width:100%;height:100%;object-fit:cover}
+.hero-img-sub{position:absolute;left:0;bottom:0;width:50%;aspect-ratio:.8;border-radius:16px;overflow:hidden;box-shadow:var(--sh2);background:var(--border);border:4px solid var(--off)}
+.hero-img-sub img{width:100%;height:100%;object-fit:cover}
+.hero-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;color:var(--dust)}
+.hero-img-placeholder .ph-ico{font-size:2.5rem;opacity:.25}
+.hero-img-placeholder .ph-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;opacity:.5}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.hstat{background:#fff;border-radius:var(--r);padding:1.2rem;border:1px solid var(--border);text-align:center}
+.hstat-n{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--ink);line-height:1}
+.hstat-l{font-family:'DM Mono',monospace;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);margin-top:.25rem}
+@keyframes slIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fdI{from{opacity:0}to{opacity:1}}
+
+/* INTRO MARQUEE STRIP */
+.marquee-strip{background:var(--red);padding:.9rem 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;gap:0;animation:marquee 22s linear infinite}
+.marquee-item{font-family:'DM Serif Display',serif;font-size:.95rem;color:#fff;padding:0 2.5rem;display:inline-flex;align-items:center;gap:2.5rem;letter-spacing:.02em;font-style:italic}
+.marquee-item::after{content:'✦';font-style:normal;font-family:'Outfit',sans-serif;font-size:.7rem;opacity:.7}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* HOME ABOUT STRIP */
+.about-strip-home{padding:6rem 0;background:#fff}
+.about-home-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-home-imgs{position:relative;aspect-ratio:1.1}
+.ahi-main{border-radius:20px;overflow:hidden;aspect-ratio:.9;box-shadow:var(--sh2);background:var(--light)}
+.ahi-main img{width:100%;height:100%;object-fit:cover}
+.ahi-badge{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--red);color:#fff;padding:1.5rem;border-radius:16px;text-align:center;box-shadow:0 8px 24px rgba(192,57,43,.35)}
+.ahi-badge-n{font-family:'DM Serif Display',serif;font-size:2rem;line-height:1}
+.ahi-badge-l{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;opacity:.8;margin-top:.2rem}
+
+/* HOME SHOWS PREVIEW */
+.shows-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.sp-card{background:#fff;border-radius:var(--r);border:1px solid var(--border);padding:2rem;transition:var(--tr);cursor:none}
+.sp-card:hover{transform:translateY(-5px);box-shadow:var(--sh2);border-color:rgba(192,57,43,.2)}
+.sp-card-ico{width:52px;height:52px;border-radius:12px;background:var(--red-pale);display:flex;align-items:center;justify-content:center;color:var(--red);font-size:1.4rem;margin-bottom:1.2rem}
+.sp-title{font-weight:700;font-size:1rem;margin-bottom:.4rem;color:var(--ink)}
+.sp-desc{font-size:.85rem;color:var(--mid);line-height:1.7;margin-bottom:1rem}
+
+/* ARTIST PROFILES SECTION (home) */
+.artist-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.ap-card{padding:4rem;position:relative;overflow:hidden;transition:var(--tr)}
+.ap-card.k{background:var(--ink);color:#fff}
+.ap-card.p{background:var(--red);color:#fff}
+.ap-card:hover.k{background:#1e1c1a}
+.ap-card:hover.p{background:#A93226}
+.ap-sym{position:absolute;right:3rem;top:3rem;opacity:.08;font-size:6rem;line-height:1}
+.ap-num{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.3em;color:rgba(255,255,255,.4);margin-bottom:.8rem}
+.ap-name{font-family:'DM Serif Display',serif;font-size:3rem;color:#fff;margin-bottom:.3rem}
+.ap-role{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2rem}
+.ap-skills{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:2rem}
+.ap-skill{font-size:.65rem;font-weight:500;padding:.25rem .75rem;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.75);border-radius:999px;letter-spacing:.04em;transition:var(--tr)}
+.ap-skill:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.ap-desc{font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:400px}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-hero{background:var(--off);padding:9rem 0 5rem;position:relative;overflow:hidden}
+.about-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
+.about-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:end}
+.about-hero-quote{font-family:'DM Serif Display',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-style:italic;line-height:1.45;color:var(--ink);padding-left:1.5rem;border-left:2px solid var(--red)}
+
+/* Artist Profile Deep Sections */
+.artist-deep{padding:6rem 0}
+.artist-deep:nth-child(odd){background:#fff}
+.ad-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.ad-img-stack{position:relative}
+.ad-img-main{border-radius:20px;overflow:hidden;aspect-ratio:.82;box-shadow:var(--sh2);background:var(--light)}
+.ad-img-main img{width:100%;height:100%;object-fit:cover}
+.ad-img-secondary{position:absolute;bottom:-2rem;right:-2rem;width:45%;aspect-ratio:.9;border-radius:14px;overflow:hidden;box-shadow:var(--sh2);border:4px solid #fff;background:var(--border)}
+.ad-img-secondary img{width:100%;height:100%;object-fit:cover}
+.ad-num{font-family:'DM Serif Display',serif;font-size:6rem;color:var(--border);line-height:.8;margin-bottom:.5rem;letter-spacing:-.04em}
+.ad-name{font-family:'DM Serif Display',serif;font-size:3.5rem;color:var(--ink);margin-bottom:.25rem}
+.ad-discipline{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:1.8rem}
+.skills-cloud{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.sk{font-size:.72rem;font-weight:500;padding:.3rem .85rem;border:1px solid var(--border);color:var(--char);border-radius:8px;background:#fff;transition:var(--tr)}
+.sk:hover{border-color:var(--red);color:var(--red)}
+.sk.hot{border-color:rgba(192,57,43,.3);color:var(--red);background:var(--red-pale)}
+.sk.warm{border-color:rgba(196,154,40,.3);color:var(--gold);background:var(--gold-pale)}
+
+/* Gallery within artist sections */
+.artist-mini-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.5rem}
+.amg-item{border-radius:10px;overflow:hidden;aspect-ratio:1;background:var(--light);cursor:pointer;transition:var(--tr)}
+.amg-item:hover{transform:scale(1.03)}
+.amg-item img{width:100%;height:100%;object-fit:cover}
+.amg-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;color:var(--dust)}
+.amg-placeholder i{font-size:1.4rem;opacity:.3}
+.amg-placeholder span{font-family:'DM Mono',monospace;font-size:.5rem;letter-spacing:.12em;opacity:.4;text-transform:uppercase}
+
+/* SHARED CONCEPT */
+.concept-dark{background:var(--ink);padding:6rem 0;color:#fff}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.concept-symbols{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.cs-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;text-align:center;transition:var(--tr)}
+.cs-item:hover{background:rgba(255,255,255,.07);border-color:rgba(192,57,43,.4)}
+.cs-ico{color:var(--red);opacity:.8;font-size:1.8rem;line-height:1}
+.cs-label{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+/* ============================================================
+   SHOWS PAGE
+   ============================================================ */
+.shows-hero{background:var(--ink);padding:9rem 0 5rem;color:#fff}
+.shows-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end}
+.shows-filter-bar{display:flex;gap:.6rem;margin-bottom:3rem;flex-wrap:wrap}
+.f-btn{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:.5rem 1.2rem;border-radius:999px;border:1px solid var(--border);color:var(--mid);background:#fff;cursor:none;transition:var(--tr);font-weight:500}
+.f-btn:hover,.f-btn.on{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* Shows list rows */
+.shows-list{display:flex;flex-direction:column;gap:1.5px;background:var(--border)}
+.show-row{background:#fff;display:grid;grid-template-columns:60px 1fr auto;gap:2.5rem;padding:2.5rem;align-items:start;transition:var(--tr);cursor:none}
+.show-row:hover{background:var(--red-pale);z-index:1}
+.show-row-num{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--border2);line-height:1}
+.show-row-body{}
+.show-row-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--ink);margin-bottom:.4rem}
+.show-row-type{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
+.show-row-desc{font-size:.88rem;line-height:1.75;color:var(--mid);margin-bottom:1rem;max-width:580px}
+.show-row-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.show-row-meta{min-width:160px;display:flex;flex-direction:column;gap:.6rem;padding-top:.3rem}
+.srm-item{display:flex;flex-direction:column;gap:.2rem}
+.srm-label{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dust)}
+.srm-val{font-size:.82rem;color:var(--char);font-weight:500}
+
+/* modal show detail */
+.show-modal{position:fixed;inset:0;background:rgba(17,16,16,.7);backdrop-filter:blur(12px);z-index:800;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.5rem 2rem;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.show-modal.open{opacity:1;pointer-events:all}
+.sm-box{background:#fff;border-radius:24px;max-width:800px;width:100%;overflow:hidden;transform:translateY(20px);transition:transform .38s cubic-bezier(.16,1,.3,1);box-shadow:0 32px 80px rgba(0,0,0,.2)}
+.show-modal.open .sm-box{transform:none}
+.sm-head{background:var(--red);color:#fff;padding:3rem;position:relative}
+.sm-close{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.15);border:none;color:#fff;width:38px;height:38px;border-radius:50%;cursor:none;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.sm-close:hover{background:rgba(255,255,255,.25)}
+.sm-title{font-family:'DM Serif Display',serif;font-size:2rem;margin-bottom:.4rem}
+.sm-type{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.sm-body{padding:2.5rem}
+.sm-section-title{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dust);margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--border)}
+.sm-body p{font-size:.95rem;line-height:1.85;color:var(--mid);margin-bottom:1.2rem}
+.sm-body ul{padding-left:1.3rem;margin-bottom:1.2rem}
+.sm-body ul li{font-size:.9rem;line-height:1.8;color:var(--mid);margin-bottom:.35rem}
+.sm-specs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.sm-spec-item{}
+.sm-spec-key{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.25rem}
+.sm-spec-val{font-size:.9rem;color:var(--char);font-weight:500}
+
+/* ============================================================
+   WORKSHOPS PAGE
+   ============================================================ */
+.ws-hero{background:var(--off);padding:9rem 0 5rem}
+.ws-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end}
+.ws-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+.wcard{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2.5rem;cursor:none;transition:var(--tr);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.wcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.wcard:hover{transform:translateY(-5px);box-shadow:var(--sh2);border-color:rgba(192,57,43,.2)}
+.wcard:hover::after{transform:scaleX(1)}
+.wcard-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem}
+.wcard-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--border);line-height:.85}
+.wcard-tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.wcard-ico{font-size:1.2rem;margin-bottom:.9rem;color:var(--red);opacity:.75}
+.wcard-title{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--ink);margin-bottom:.3rem;line-height:1.25}
+.wcard-sub{font-family:'DM Serif Display',serif;font-style:italic;font-size:.9rem;color:var(--red);margin-bottom:1rem}
+.wcard-desc{font-size:.85rem;line-height:1.75;color:var(--mid);flex:1;margin-bottom:1.4rem}
+.wcard-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:1.1rem;margin-top:auto}
+.wcard-dur{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust)}
+.wcard-open{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:var(--red-pale);padding:.35rem .8rem;border-radius:999px;border:none;cursor:none;transition:var(--tr)}
+.wcard-open:hover{background:var(--red);color:#fff}
+
+/* workshop modal */
+.wmo{position:fixed;inset:0;background:rgba(17,16,16,.7);backdrop-filter:blur(12px);z-index:800;display:flex;align-items:flex-start;justify-content:center;padding:5rem 1.5rem 2rem;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.wmo.open{opacity:1;pointer-events:all}
+.wm{background:#fff;border-radius:24px;max-width:820px;width:100%;overflow:hidden;transform:translateY(20px);transition:transform .38s cubic-bezier(.16,1,.3,1);box-shadow:0 32px 80px rgba(0,0,0,.2)}
+.wmo.open .wm{transform:none}
+.wmt{background:var(--ink);color:#fff;padding:2.8rem;position:relative}
+.wmc{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.12);border:none;color:#fff;width:38px;height:38px;border-radius:50%;cursor:none;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.wmc:hover{background:rgba(255,255,255,.22)}
+.wm-ttl{font-family:'DM Serif Display',serif;font-size:2rem;margin-bottom:.4rem}
+.wm-sub{font-size:.9rem;color:rgba(255,255,255,.55);font-style:italic}
+.wmb{padding:2.5rem}
+.wmst{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dust);margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--border)}
+.wmb p,.wmb li{font-size:.92rem;line-height:1.85;color:var(--mid)}
+.wmb ul{padding-left:1.3rem;margin-bottom:1.2rem}
+.wmb li{margin-bottom:.4rem}
+
+/* ============================================================
+   GALLERY PAGE
+   ============================================================ */
+.gal-hero{background:var(--off);padding:9rem 0 5rem}
+.gallery-filter{display:flex;gap:.6rem;margin-bottom:3rem;flex-wrap:wrap}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.gal-item{position:relative;border-radius:14px;overflow:hidden;background:var(--light);cursor:pointer;aspect-ratio:4/3;transition:var(--tr)}
+.gal-item:hover{transform:scale(1.02);box-shadow:var(--sh2)}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.gal-item:hover img{opacity:.9}
+.gal-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(17,16,16,.85),transparent);padding:2rem 1.2rem 1.2rem;color:#fff;font-size:.88rem}
+.gal-del{position:absolute;top:.9rem;right:.9rem;background:rgba(0,0,0,.55);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:none;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;font-size:.7rem}
+.gal-item:hover .gal-del{opacity:1}
+.gal-placeholder-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;border-radius:14px;background:var(--light);border:2px dashed var(--border2);aspect-ratio:4/3}
+.gal-placeholder-item i{font-size:2rem;color:var(--dust);opacity:.4}
+.gal-placeholder-item span{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);opacity:.5}
+
+/* Slideshow */
+.slideshow-wrap{position:relative;border-radius:20px;overflow:hidden;background:var(--light);aspect-ratio:16/9;box-shadow:var(--sh2)}
+.slide-frame img{width:100%;height:100%;object-fit:cover}
+.slide-frame{width:100%;height:100%}
+.slide-caption{position:absolute;bottom:1rem;left:1.2rem;background:rgba(17,16,16,.65);color:#fff;padding:.4rem .9rem;border-radius:999px;font-size:.78rem;font-family:'DM Mono',monospace}
+.slide-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:none;transition:var(--tr);box-shadow:var(--sh);color:var(--ink);font-size:.85rem}
+.slide-nav:first-child{left:1rem}
+.slide-nav:last-child{right:1rem}
+.slide-nav:hover{background:#fff;transform:translateY(-50%) scale(1.08)}
+.slide-empty{display:flex;align-items:center;justify-content:center;height:100%;font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dust)}
+.media-hub{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+.media-block{}
+.media-block-head{margin-bottom:1.5rem}
+.media-block-title{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:.4rem}
+.media-block-sub{font-size:.85rem;color:var(--mid);line-height:1.7}
+.reel-grid{display:flex;flex-direction:column;gap:1rem}
+.reel-card{background:var(--light);border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+.reel-frame{width:100%;aspect-ratio:16/9;border:none;display:block}
+.reel-info{padding:1rem 1.2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.reel-name{font-size:.9rem;font-weight:600;color:var(--ink)}
+.reel-source{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dust);margin-top:.2rem}
+.mini-link{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);white-space:nowrap;border-bottom:1px solid rgba(192,57,43,.3);padding-bottom:.1rem;transition:var(--tr)}
+.mini-link:hover{color:#A93226}
+.media-empty{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);padding:2.5rem;text-align:center;background:var(--light);border-radius:12px;border:2px dashed var(--border2);line-height:1.8}
+
+/* ============================================================
+   MEDIA / PRESS PAGE
+   ============================================================ */
+.media-page{background:var(--off);padding:9rem 0 5rem}
+.download-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem}
+.download-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;align-items:center;gap:1.2rem;transition:var(--tr);cursor:pointer}
+.download-card:hover{border-color:var(--red);transform:translateX(4px);box-shadow:var(--sh)}
+.download-icon{width:50px;height:50px;background:var(--red-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:1.3rem;flex-shrink:0}
+.download-title{font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:.25rem}
+.download-label{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dust)}
+
+/* ============================================================
+   SCHEDULE PAGE
+   ============================================================ */
+.sched-sec{background:#fff;padding:5rem 0}
+.sched-list{display:flex;flex-direction:column}
+.sched-row{display:grid;grid-template-columns:90px 1fr auto;gap:2rem;align-items:center;padding:1.5rem 1.2rem;border-bottom:1px solid var(--border);transition:var(--tr)}
+.sched-row:hover{background:var(--off)}
+.sched-day{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--red);line-height:1}
+.sched-month{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dust);margin-top:.2rem}
+.sched-event{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--ink);margin-bottom:.3rem}
+.sched-loc{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
+.sched-badge{font-family:'DM Mono',monospace;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border);color:var(--mid);padding:.28rem .75rem;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:.3rem;background:var(--off)}
+.sched-row.past{opacity:.5}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-page{padding:9rem 0 5rem;background:var(--off)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}
+.contact-info-block{margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid var(--border)}
+.contact-info-block:last-child{border-bottom:none}
+.ci-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:.45rem}
+.ci-val{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--ink)}
+.ci-val a{color:var(--ink);transition:color .2s;cursor:none}
+.ci-val a:hover{color:var(--red)}
+.contact-form-box{background:#fff;border:1px solid var(--border);border-radius:20px;padding:2.5rem;box-shadow:var(--sh)}
+.cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.cf-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:.4rem}
+.cf-input,.cf-select,.cf-textarea{width:100%;padding:.85rem 1rem;border:1.5px solid var(--border);border-radius:10px;background:#fff;color:var(--ink);font-family:'Outfit',sans-serif;font-size:.92rem;outline:none;transition:border-color .25s;cursor:none;-webkit-appearance:none}
+.cf-input:focus,.cf-select:focus,.cf-textarea:focus{border-color:var(--red)}
+.cf-textarea{min-height:140px;resize:vertical;margin-bottom:1rem}
+.cf-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6560' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.cf-submit{width:100%;padding:1rem;background:var(--red);color:#fff;border:none;border-radius:999px;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:none;transition:var(--tr);margin-top:.5rem}
+.cf-submit:hover{background:#A93226;transform:translateY(-1px);box-shadow:0 4px 20px rgba(192,57,43,.3)}
+.cf-note{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dust);margin-top:.7rem;text-align:center}
+.cf-success{display:none;text-align:center;padding:3rem;background:var(--off);border-radius:14px;border:1px solid var(--border)}
+.cf-success .h-md{color:var(--red);margin-bottom:.7rem}
+
+/* ============================================================
+   LINKTREE PAGE
+   ============================================================ */
+.lt-page{background:var(--off);min-height:100vh;padding:8rem 0 5rem;display:flex;align-items:center}
+.lt-inner{max-width:640px;margin:0 auto;width:100%;text-align:center;padding:0 2rem}
+.lt-avatar{width:130px;height:130px;margin:0 auto 2rem;border-radius:50%;background:linear-gradient(135deg,var(--red-pale2),var(--red-pale));display:flex;align-items:center;justify-content:center;border:3px solid rgba(192,57,43,.2);overflow:hidden;box-shadow:var(--sh)}
+.lt-avatar img{width:100%;height:100%;object-fit:cover}
+.lt-name{font-family:'DM Serif Display',serif;font-size:3rem;color:var(--ink);margin-bottom:.5rem}
+.lt-sub{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);margin-bottom:2rem}
+.lt-desc{font-size:.95rem;color:var(--mid);line-height:1.8;margin-bottom:3rem}
+.lt-list{display:flex;flex-direction:column;gap:1rem}
+.lk-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;cursor:pointer;transition:var(--tr);text-align:left}
+.lk-card:hover{border-color:var(--red);transform:translateX(6px);box-shadow:var(--sh)}
+.lk-ico{width:52px;height:52px;background:var(--red-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:1.3rem;flex-shrink:0}
+.lk-content h3{font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:.2rem}
+.lk-content p{font-size:.8rem;color:var(--mid)}
+.lk-arrow{margin-left:auto;color:var(--border2);font-size:.9rem;transition:var(--tr)}
+.lk-card:hover .lk-arrow{color:var(--red);transform:translateX(3px)}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testi-sec{padding:6rem 0;background:var(--off)}
+.carousel{position:relative;max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:24px;padding:3rem;overflow:hidden;box-shadow:var(--sh)}
+.carousel-inner{display:flex;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.carousel-item{min-width:100%}
+.testimonial-quote{font-family:'DM Serif Display',serif;font-size:1.4rem;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:2rem}
+.testimonial-author{display:flex;align-items:center;gap:1rem}
+.testimonial-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--red),#E74C3C);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.4rem;flex-shrink:0;overflow:hidden}
+.testimonial-avatar img{width:100%;height:100%;object-fit:cover}
+.testimonial-info h4{font-weight:700;font-size:.9rem;color:var(--ink);margin-bottom:.15rem}
+.testimonial-info p{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.t-stars{display:flex;gap:.2rem;margin-bottom:1.5rem}
+.t-stars i{color:var(--gold);font-size:.85rem}
+.carousel-controls{display:flex;justify-content:center;align-items:center;gap:2rem;margin-top:2.5rem}
+.carousel-btn{width:42px;height:42px;border-radius:50%;background:var(--red-pale);border:1px solid rgba(192,57,43,.2);color:var(--red);display:flex;align-items:center;justify-content:center;cursor:none;transition:var(--tr)}
+.carousel-btn:hover{background:var(--red);color:#fff;transform:scale(1.08)}
+.carousel-dots{display:flex;gap:.5rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--border2);cursor:none;transition:var(--tr)}
+.dot.active{background:var(--red);width:20px;border-radius:999px}
+
+/* ============================================================
+   CTA STRIP
+   ============================================================ */
+.cta-sec{background:var(--red);padding:5rem 0;color:#fff}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:3rem;flex-wrap:wrap}
+.cta-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.8rem}
+.cta-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:.8rem;line-height:1}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.7);max-width:380px;line-height:1.75}
+.cta-btns{display:flex;flex-direction:column;gap:.9rem;align-items:flex-end}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--ink);padding:5rem 0 2.5rem;color:rgba(255,255,255,.5)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:2.5rem}
+.foot-logo{font-family:'DM Serif Display',serif;font-size:2rem;color:#fff;letter-spacing:-.01em;font-style:italic;margin-bottom:.6rem}
+.foot-logo em{font-style:normal;color:var(--red)}
+.foot-tag{font-style:italic;font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.65;margin-bottom:1.5rem}
+.foot-social{display:flex;gap:1rem;flex-wrap:wrap}
+.foot-social a{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:color .2s;cursor:none;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:.15rem}
+.foot-social a:hover{color:#fff}
+.foot-col h4{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.foot-col a{display:block;font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:.6rem;transition:color .2s;cursor:none}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-copy{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:rgba(255,255,255,.22)}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  #mnav{padding:.9rem 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .menu-toggle{display:flex}
+  .hero-inner,.about-home-grid,.artist-pair,.ad-grid,.concept-grid,.shows-hero-grid,.ws-hero-grid,.contact-grid,.cta-inner,.about-hero-grid,.foot-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero-img-pair{height:320px}
+  .hero-right{display:none}
+  .artist-pair{gap:2px}
+  .media-hub{grid-template-columns:1fr}
+  .cf-grid{grid-template-columns:1fr}
+  .sm-specs{grid-template-columns:1fr}
+  .cta-btns{align-items:flex-start}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .foot-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  .wrap{padding:0 1.2rem}
+  .sec{padding:4.5rem 0}
+  .shows-preview{grid-template-columns:1fr}
+  .ws-grid{grid-template-columns:1fr}
+  #pnav{display:none}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .shows-list{gap:1px}
+  .show-row{grid-template-columns:1fr;gap:1rem}
+  .show-row-num{display:none}
+  .foot-grid{grid-template-columns:1fr}
+  .artist-mini-gallery{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div><div id="cur-r"></div>
+
+<!-- ========== NAV ========== -->
+<nav id="mnav">
+  <div class="nav-brand">KAIDA<em>BLO</em></div>
+  <button class="menu-toggle" onclick="toggleMob()" title="Menu"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links">
+    <li><a href="#" onclick="gp('home');return false;" id="nl-home" class="act"><i class="fas fa-house"></i> Home</a></li>
+    <li><a href="#" onclick="gp('about');return false;" id="nl-about"><i class="fas fa-users"></i> About</a></li>
+    <li><a href="#" onclick="gp('shows');return false;" id="nl-shows"><i class="fas fa-fire"></i> Shows</a></li>
+    <li><a href="#" onclick="gp('workshops');return false;" id="nl-workshops"><i class="fas fa-graduation-cap"></i> Workshops</a></li>
+    <li><a href="#" onclick="gp('gallery');return false;" id="nl-gallery"><i class="fas fa-images"></i> Gallery</a></li>
+    <li><a href="#" onclick="gp('media');return false;" id="nl-media"><i class="fas fa-film"></i> Media</a></li>
+    <li><a href="#" onclick="gp('contact');return false;" id="nl-contact" class="nav-cta"><i class="fas fa-envelope"></i> Book Us</a></li>
+  </ul>
+</nav>
+
+<div class="mobile-nav" id="mobNav">
+  <button class="mobile-close" onclick="closeMob()"><i class="fas fa-times"></i></button>
+  <a href="#" onclick="gp('home');closeMob();return false;"><i class="fas fa-house"></i> Home</a>
+  <a href="#" onclick="gp('about');closeMob();return false;"><i class="fas fa-users"></i> About</a>
+  <a href="#" onclick="gp('shows');closeMob();return false;"><i class="fas fa-fire"></i> Shows</a>
+  <a href="#" onclick="gp('workshops');closeMob();return false;"><i class="fas fa-graduation-cap"></i> Workshops</a>
+  <a href="#" onclick="gp('gallery');closeMob();return false;"><i class="fas fa-images"></i> Gallery</a>
+  <a href="#" onclick="gp('media');closeMob();return false;"><i class="fas fa-film"></i> Media</a>
+  <a href="#" onclick="gp('linktree');closeMob();return false;"><i class="fas fa-link"></i> Links</a>
+  <a href="#" onclick="gp('contact');closeMob();return false;" style="color:var(--red);font-weight:700"><i class="fas fa-envelope"></i> Book Us</a>
+</div>
+
+<div id="pnav">
+  <button class="pb on" onclick="gp('home')" id="pb-home">Home</button>
+  <button class="pb" onclick="gp('about')" id="pb-about">About</button>
+  <button class="pb" onclick="gp('shows')" id="pb-shows">Shows</button>
+  <button class="pb" onclick="gp('workshops')" id="pb-workshops">Workshops</button>
+  <button class="pb" onclick="gp('gallery')" id="pb-gallery">Gallery</button>
+  <button class="pb" onclick="gp('media')" id="pb-media">Media</button>
+  <button class="pb" onclick="gp('linktree')" id="pb-linktree">Links</button>
+  <button class="pb" onclick="gp('contact')" id="pb-contact">Contact</button>
+</div>
+
+<main id="main">
+
+<!-- ============================================================
+     HOME PAGE
+     ============================================================ -->
+<div id="pg-home" class="pg on">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-accent"></div>
+    <div class="hero-accent2"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag"><i class="fas fa-globe"></i> Performance Duo · Europe &amp; Asia</div>
+        <h1 class="hero-title">
+          <span>KAIDA</span>
+          <span>BLO</span>
+        </h1>
+        <p class="hero-sub">Fire · Dance · Martial Arts · Acrobatics.<br>A living dialogue between two bodies and the space between.</p>
+        <div class="hero-btns">
+          <button class="btn btn-red" onclick="gp('shows')"><i class="fas fa-fire"></i> Our Shows</button>
+          <button class="btn btn-outline" onclick="gp('workshops')"><i class="fas fa-graduation-cap"></i> Workshops</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-pair">
+          <div class="hero-img-main">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277974/20260212-fof-008_pwnhod.jpg" alt="Kaidablo fire performance" id="hero-img-main" loading="eager"/>
+          </div>
+          <div class="hero-img-sub" id="hero-img-sub-wrap">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277977/20260212-fof-003_aer5iw.jpg" alt="Kaidablo contact dance" id="hero-img-sub" loading="eager"/>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><div class="hstat-n">8+</div><div class="hstat-l">Years Exp.</div></div>
+          <div class="hstat"><div class="hstat-n">24+</div><div class="hstat-l">Festivals</div></div>
+          <div class="hstat"><div class="hstat-n">9</div><div class="hstat-l">Workshops</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      <span class="marquee-item">Fire Performance</span>
+      <span class="marquee-item">Contact Dance</span>
+      <span class="marquee-item">Martial Arts</span>
+      <span class="marquee-item">Partner Acrobatics</span>
+      <span class="marquee-item">Physical Theatre</span>
+      <span class="marquee-item">Contact Staff</span>
+      <span class="marquee-item">Wushu & FMA</span>
+      <span class="marquee-item">Stage Design</span>
+      <span class="marquee-item">Fire Performance</span>
+      <span class="marquee-item">Contact Dance</span>
+      <span class="marquee-item">Martial Arts</span>
+      <span class="marquee-item">Partner Acrobatics</span>
+      <span class="marquee-item">Physical Theatre</span>
+      <span class="marquee-item">Contact Staff</span>
+      <span class="marquee-item">Wushu & FMA</span>
+      <span class="marquee-item">Stage Design</span>
+    </div>
+  </div>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip-home">
+    <div class="wrap">
+      <div class="about-home-grid">
+        <div class="about-home-imgs rv">
+          <div class="ahi-main">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277891/20260210-fof-030-2_agzdiu.jpg" alt="Kaidablo duo performance"/>
+          </div>
+          <div class="ahi-badge">
+            <div class="ahi-badge-n">2</div>
+            <div class="ahi-badge-l">Artists</div>
+          </div>
+        </div>
+        <div class="rv d1">
+          <div class="label"><i class="fas fa-fire-flame-curved"></i> The Duo</div>
+          <h2 class="h-lg" style="margin-bottom:1.4rem">Kaida &amp; Pablo — One Movement</h2>
+          <p class="body" style="margin-bottom:1.5rem">Kaidablo is the creative partnership of Kaida and Pablo — two artists whose complementary styles create something unrepeatable. Each show is a conversation: between bodies, between discipline and instinct, between the stillness beneath the flame and the force that feeds it.</p>
+          <p class="body" style="margin-bottom:2rem">Drawing on contact dance, martial arts, and contemporary movement, they weave these disciplines into a shared physical language that explores trust, risk, and human connection.</p>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem">
+            <span class="chip chip-red"><i class="fas fa-fire"></i> Fire Shows</span>
+            <span class="chip chip-gold"><i class="fas fa-star"></i> Family Shows</span>
+            <span class="chip"><i class="fas fa-graduation-cap"></i> Workshops</span>
+            <span class="chip"><i class="fas fa-theater-masks"></i> Physical Theatre</span>
+          </div>
+          <button class="btn btn-red" onclick="gp('about')"><i class="fas fa-arrow-right"></i> Meet the Artists</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTISTS SPLIT -->
+  <div class="artist-pair">
+    <div class="ap-card k rv">
+      <div class="ap-sym"><i class="fas fa-khanda"></i></div>
+      <div class="ap-num">01</div>
+      <div class="ap-name">Kaida</div>
+      <div class="ap-role">Martial Arts · Fire · Aerials · Wushu</div>
+      <div class="ap-skills">
+        <span class="ap-skill">Wushu / FMA</span>
+        <span class="ap-skill">Sword</span>
+        <span class="ap-skill">L-Basing</span>
+        <span class="ap-skill">Dragon Staff</span>
+        <span class="ap-skill">Aerials</span>
+        <span class="ap-skill">Film Fighting</span>
+        <span class="ap-skill">TKD Kicks</span>
+        <span class="ap-skill">Partner Poi</span>
+      </div>
+      <p class="ap-desc">Precision meets power. Kaida brings martial discipline and theatrical intensity — a warrior's body with an artist's sensitivity.</p>
+    </div>
+    <div class="ap-card p rv d1">
+      <div class="ap-sym"><i class="fas fa-wand-sparkles"></i></div>
+      <div class="ap-num">02</div>
+      <div class="ap-name">Pablo</div>
+      <div class="ap-role">Physical Theatre · Circus · Space Design</div>
+      <div class="ap-skills">
+        <span class="ap-skill">Contact Staff</span>
+        <span class="ap-skill">Physical Theatre</span>
+        <span class="ap-skill">Contact Improv</span>
+        <span class="ap-skill">Flying Pole</span>
+        <span class="ap-skill">Clowning</span>
+        <span class="ap-skill">Stage Design</span>
+        <span class="ap-skill">Saxophone</span>
+        <span class="ap-skill">Fire Safety</span>
+      </div>
+      <p class="ap-desc">Space, light, and movement as poetic language. Pablo creates immersive environments where the line between performer and spectator disappears.</p>
+    </div>
+  </div>
+
+  <!-- SHOWS PREVIEW -->
+  <section class="sec sec-light">
+    <div class="wrap">
+      <div class="label rv"><i class="fas fa-star"></i> Live Performances</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:3rem">
+        <h2 class="h-lg rv d1">Six Shows — from Fire to Theatre</h2>
+        <div class="rv d2" style="display:flex;flex-direction:column;align-items:flex-end;gap:1rem">
+          <p class="body" style="text-align:right">From adult fire duets to family-friendly daytime spectacle, solo martial arts, and immersive physical theatre pieces.</p>
+          <button class="btn btn-red" onclick="gp('shows')"><i class="fas fa-arrow-right"></i> All Shows</button>
+        </div>
+      </div>
+      <div class="shows-preview">
+        <div class="sp-card rv d1">
+          <div class="sp-card-ico"><i class="fas fa-fire"></i></div>
+          <div class="sp-title">Fire Duet</div>
+          <div class="sp-desc">Swords, palms, contact dance — a living dialogue through flame. Elegant, intense, unrepeatable.</div>
+          <div style="display:flex;gap:.4rem;flex-wrap:wrap"><span class="chip chip-red">Duo</span><span class="chip">Adults</span><span class="chip">≈10 min</span></div>
+        </div>
+        <div class="sp-card rv d2">
+          <div class="sp-card-ico"><i class="fas fa-khanda"></i></div>
+          <div class="sp-title">Warrior Dialogue</div>
+          <div class="sp-desc">The full Kaidablo signature show — martial arts meets contact improvisation. High energy, high technique.</div>
+          <div style="display:flex;gap:.4rem;flex-wrap:wrap"><span class="chip chip-red">Duo</span><span class="chip">Adults</span><span class="chip">15–20 min</span></div>
+        </div>
+        <div class="sp-card rv d3">
+          <div class="sp-card-ico"><i class="fas fa-sun"></i></div>
+          <div class="sp-title">Daytime & LED Show</div>
+          <div class="sp-desc">Fans, hoop, veil poi — a vibrant family-friendly spectacle without fire. Perfect for daytime events.</div>
+          <div style="display:flex;gap:.4rem;flex-wrap:wrap"><span class="chip chip-gold">Family</span><span class="chip">All Ages</span><span class="chip">Flexible</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE PREVIEW -->
+  <section class="sched-sec sec-white">
+    <div class="wrap">
+      <div class="label rv"><i class="fas fa-calendar-alt"></i> Where We'll Be</div>
+      <h2 class="h-lg rv d1" style="margin-bottom:3rem">Upcoming Events</h2>
+      <div class="sched-list rv d2" id="sched-list"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi-sec">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:3.5rem" class="rv">
+        <div class="label" style="justify-content:center"><i class="fas fa-quote-left"></i> Feedback</div>
+        <h2 class="h-lg">What people say</h2>
+      </div>
+      <div class="carousel rv d1">
+        <div class="carousel-inner" id="carouselInner"></div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" onclick="prevT()"><i class="fas fa-chevron-left"></i></button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" onclick="nextT()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-inner rv">
+        <div>
+          <div class="cta-label"><i class="fas fa-envelope"></i> Get in Touch</div>
+          <h2 class="cta-title">Let's perform<br/>together</h2>
+          <p class="cta-sub">Shows · Workshops · Festival bookings · Custom projects · Fire Safety</p>
+        </div>
+        <div class="cta-btns rv d2">
+          <a href="mailto:pablotalavera089@gmail.com"><button class="btn btn-white"><i class="fas fa-envelope"></i> Email Us</button></a>
+          <a href="https://instagram.com/echo_between" target="_blank"><button class="btn btn-outline-white"><i class="fab fa-instagram"></i> @echo_between</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a><a href="mailto:pablotalavera089@gmail.com">Email</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a><a href="#" onclick="gp('media')">Media</a><a href="#" onclick="gp('contact')">Contact</a></div>
+    <div class="foot-col"><h4>Shows</h4><a href="#" onclick="gp('shows')">Fire Duet</a><a href="#" onclick="gp('shows')">Warrior Dialogue</a><a href="#" onclick="gp('shows')">Daytime Show</a><a href="#" onclick="gp('shows')">Between Worlds</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">pablotalavera089@gmail.com</a><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a><a href="#" onclick="gp('linktree')">All Links</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera · All rights reserved</p><p class="foot-copy">Thailand · Europe Jul–Sep 2026</p></div></div></footer>
+</div><!-- end home -->
+
+
+<!-- ============================================================
+     ABOUT PAGE
+     ============================================================ -->
+<div id="pg-about" class="pg">
+  <div class="about-hero">
+    <div class="wrap">
+      <div class="about-hero-grid">
+        <div>
+          <div class="label rv"><i class="fas fa-users"></i> The Artists</div>
+          <h1 class="h-xl rv d1" style="margin-top:.5rem">About<br><em>Kaidablo</em></h1>
+        </div>
+        <div class="rv d2">
+          <blockquote class="about-hero-quote">"Each performance is a conversation: between bodies, between discipline and instinct, between the stillness beneath the flame and the force that feeds it."</blockquote>
+          <p class="body" style="margin-top:1.5rem">Kaidablo is the creative partnership of Kaida and Pablo. Drawing on contact dance, martial arts, and contemporary movement, they weave these disciplines into a shared physical language — exploring trust, risk, and connection as an evolving physical conversation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KAIDA DEEP -->
+  <section class="artist-deep">
+    <div class="wrap">
+      <div class="ad-grid">
+        <div class="ad-img-stack rv">
+          <div class="ad-img-main">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277974/20260212-fof-008_pwnhod.jpg" alt="Kaida martial arts" id="kaida-about-img"/>
+          </div>
+          <div class="ad-img-secondary">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277977/20260212-fof-003_aer5iw.jpg" alt="Kaida fire performance" id="kaida-about-img2"/>
+          </div>
+        </div>
+        <div class="rv d1">
+          <div class="ad-num">01</div>
+          <div class="ad-name">Kaida</div>
+          <div class="ad-discipline">Martial Arts · Fire · Aerials · Wushu</div>
+          <p class="body" style="margin-bottom:1.4rem">Precision meets power. Kaida brings the discipline of Wushu and Filipino Martial Arts together with fire, aerials, and contemporary movement. A warrior's body with an artist's sensitivity — sharp, intuitive, and deeply physical.</p>
+          <p class="body" style="margin-bottom:2rem">Specialising in film fighting and stage combat, Kaida creates moments of intense clarity in motion — from TKD kicks to seamless partner acrobatics. She holds the sword and the soft lift with equal mastery.</p>
+          <div class="skills-cloud" style="margin-bottom:2rem">
+            <span class="sk hot">Wushu</span><span class="sk hot">FMA</span><span class="sk hot">Sword</span>
+            <span class="sk hot">Film Fighting</span><span class="sk hot">L-Basing</span><span class="sk">Partner Poi</span>
+            <span class="sk hot">Dragon Staff</span><span class="sk">Aerials</span><span class="sk">TKD Kicks</span>
+            <span class="sk warm">Stage Combat</span><span class="sk warm">Partner Poi</span><span class="sk">Contemporary Dance</span>
+          </div>
+          <div class="label" style="margin-bottom:1rem"><i class="fas fa-fire"></i> Fire Props</div>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem">
+            <span class="chip chip-red">Palm Torches</span><span class="chip chip-red">Dragon Staff</span>
+            <span class="chip chip-red">Sword Fire</span><span class="chip chip-red">Partner Dragon</span>
+          </div>
+          <h3 class="h-sm" style="margin-bottom:1rem;color:var(--mid)">Gallery — Kaida</h3>
+          <div class="artist-mini-gallery" id="kaida-gallery-mini"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PABLO DEEP -->
+  <section class="artist-deep sec-light">
+    <div class="wrap">
+      <div class="ad-grid" style="direction:rtl">
+        <div class="ad-img-stack rv" style="direction:ltr">
+          <div class="ad-img-main">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277891/20260210-fof-030-2_agzdiu.jpg" alt="Pablo contact staff" id="pablo-about-img"/>
+          </div>
+          <div class="ad-img-secondary" style="right:auto;left:-2rem">
+            <img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277979/20260212-fof-004_bfxfoh.jpg" alt="Pablo physical theatre" id="pablo-about-img2"/>
+          </div>
+        </div>
+        <div class="rv d1" style="direction:ltr">
+          <div class="ad-num">02</div>
+          <div class="ad-name">Pablo</div>
+          <div class="ad-discipline">Physical Theatre · Circus · Stage Design</div>
+          <p class="body" style="margin-bottom:1.4rem">Pablo Talavera is a multidisciplinary performance artist with around 8 years of professional experience. His work combines movement, space, and light to create emotionally engaging and interactive performances — bringing a poetic, physical, and sometimes absurd sensibility to everything he creates.</p>
+          <p class="body" style="margin-bottom:2rem">From building yurts at 20+ festivals to coordinating fire safety for 350+ visitors at Fai Jai 2025, from contact staff to flying pole — Pablo is as comfortable constructing the stage as inhabiting it. His solo work "Between Worlds / Dream Sand" tours internationally in German and English.</p>
+          <div class="skills-cloud" style="margin-bottom:2rem">
+            <span class="sk hot">Contact Staff</span><span class="sk hot">Physical Theatre</span>
+            <span class="sk hot">Contact Improv</span><span class="sk">Flying Pole</span>
+            <span class="sk">Clowning</span><span class="sk hot">Stage Design</span>
+            <span class="sk">Saxophone</span><span class="sk">Light Installations</span>
+            <span class="sk warm">Festival Architecture</span><span class="sk warm">Fire Safety</span>
+            <span class="sk">Sound Installation</span><span class="sk">Poetry</span>
+          </div>
+          <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.5rem">
+            <a href="mailto:pablotalavera089@gmail.com"><button class="btn btn-red btn-sm" style="font-size:.7rem;padding:.7rem 1.5rem"><i class="fas fa-envelope"></i> Contact Pablo</button></a>
+            <a href="https://instagram.com/echo_between" target="_blank"><button class="btn btn-outline" style="font-size:.7rem;padding:.7rem 1.5rem"><i class="fab fa-instagram"></i> @echo_between</button></a>
+          </div>
+          <h3 class="h-sm" style="margin-bottom:1rem;color:var(--mid)">Gallery — Pablo</h3>
+          <div class="artist-mini-gallery" id="pablo-gallery-mini"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT DARK -->
+  <section class="concept-dark">
+    <div class="wrap">
+      <div class="concept-grid">
+        <div class="invert">
+          <div class="label rv"><i class="fas fa-atom"></i> Philosophy</div>
+          <h2 class="h-lg rv d1" style="color:#fff;margin-top:.5rem;margin-bottom:1.8rem">The Negative<br><em style="color:var(--red)">Space</em></h2>
+          <p class="body rv d2" style="color:rgba(255,255,255,.6);margin-bottom:1.5rem">Their shows investigate how tension, proximity, and complementary movement qualities create a dialogue between two movers. The choreography plays with contrast between softness and intensity, control and surrender.</p>
+          <p class="body rv d3" style="color:rgba(255,255,255,.45);margin-bottom:2.5rem">Drawing on contact dance, martial arts, and contemporary movement, they weave these disciplines into a shared physical language — incorporating fire props and shifting physical relationships to navigate moments of attraction, resistance, and balance.</p>
+          <button class="btn btn-outline-white rv d4" onclick="gp('contact')"><i class="fas fa-envelope"></i> Work With Us</button>
+        </div>
+        <div class="concept-symbols rv d2">
+          <div class="cs-item"><div class="cs-ico"><i class="fas fa-fire-flame-curved"></i></div><div class="cs-label">Fire</div></div>
+          <div class="cs-item"><div class="cs-ico"><i class="fas fa-link"></i></div><div class="cs-label">Connection</div></div>
+          <div class="cs-item"><div class="cs-ico"><i class="fas fa-khanda"></i></div><div class="cs-label">Martial Arts</div></div>
+          <div class="cs-item"><div class="cs-ico"><i class="fas fa-person-running"></i></div><div class="cs-label">Dance</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a><a href="#" onclick="gp('contact')">Contact</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">Email Pablo</a><a href="https://instagram.com/echo_between" target="_blank">Instagram</a></div>
+    <div class="foot-col"><h4>Book</h4><a href="#" onclick="gp('contact')">Book a Show</a><a href="#" onclick="gp('contact')">Book a Workshop</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera</p></div></div></footer>
+</div><!-- end about -->
+
+
+<!-- ============================================================
+     SHOWS PAGE
+     ============================================================ -->
+<div id="pg-shows" class="pg">
+  <div class="shows-hero">
+    <div class="wrap">
+      <div class="shows-hero-grid">
+        <div class="invert">
+          <div class="label rv"><i class="fas fa-fire"></i> Live Performances</div>
+          <h1 class="h-xl rv d1" style="color:#fff;margin-top:.4rem">Our<br><em>Shows</em></h1>
+        </div>
+        <div class="invert rv d2">
+          <p class="body" style="color:rgba(255,255,255,.6);margin-bottom:2rem">Six distinct performances — spanning fire duos, solo martial arts, family-friendly spectacle, and immersive physical theatre. Every show is adapted to its space and audience.</p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <span style="border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px">Duo</span>
+            <span style="border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px">Solo</span>
+            <span style="border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px">Family Friendly</span>
+            <span style="border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px">Theatre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec sec-white">
+    <div class="wrap">
+      <div class="shows-filter-bar">
+        <button class="f-btn on" onclick="filterShows('all',this)">All Shows</button>
+        <button class="f-btn" onclick="filterShows('duo',this)">Duo</button>
+        <button class="f-btn" onclick="filterShows('solo',this)">Solo</button>
+        <button class="f-btn" onclick="filterShows('family',this)">Family Friendly</button>
+        <button class="f-btn" onclick="filterShows('theatre',this)">Theatre</button>
+        <button class="f-btn" onclick="filterShows('fire',this)">Fire</button>
+      </div>
+      <div class="shows-list" id="shows-list"></div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="wrap"><div class="cta-inner rv">
+      <div><div class="cta-label">Ready to book?</div><h2 class="cta-title">Let's create<br/>something live</h2><p class="cta-sub">Performances · Custom shows · Festival bookings</p></div>
+      <div class="cta-btns rv d2"><a href="mailto:pablotalavera089@gmail.com"><button class="btn btn-white"><i class="fas fa-envelope"></i> Book a Show</button></a><button class="btn btn-outline-white" onclick="gp('workshops')"><i class="fas fa-graduation-cap"></i> View Workshops</button></div>
+    </div></div>
+  </section>
+
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a><a href="#" onclick="gp('contact')">Contact</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">Email Pablo</a></div>
+    <div class="foot-col"><h4>Book</h4><a href="#" onclick="gp('contact')">Book a Show</a><a href="#" onclick="gp('contact')">Book a Workshop</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera</p></div></div></footer>
+</div><!-- end shows -->
+
+<!-- Show detail modal -->
+<div class="show-modal" id="showModal" onclick="if(event.target===this)closeShowModal()">
+  <div class="sm-box">
+    <button class="sm-close" onclick="closeShowModal()"><i class="fas fa-times"></i></button>
+    <div class="sm-head" id="sm-head"></div>
+    <div class="sm-body" id="sm-body"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     WORKSHOPS PAGE
+     ============================================================ -->
+<div id="pg-workshops" class="pg">
+  <div class="ws-hero">
+    <div class="wrap">
+      <div class="ws-hero-grid">
+        <div>
+          <div class="label rv"><i class="fas fa-graduation-cap"></i> Learn · Move · Create</div>
+          <h1 class="h-xl rv d1" style="margin-top:.4rem">Work<em>shops</em></h1>
+        </div>
+        <div class="rv d2">
+          <p class="body" style="margin-bottom:1.8rem">Nine workshops taught solo, as a duo, or combined — from beginner acrobatics to advanced contact staff and partner fire flow. Every workshop is labeled by teacher, discipline, and level.</p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <span class="chip chip-red"><i class="fas fa-user"></i> Pablo</span>
+            <span class="chip chip-gold"><i class="fas fa-user"></i> Kaida</span>
+            <span class="chip chip-dark"><i class="fas fa-users"></i> Duo</span>
+            <span class="chip"><i class="fas fa-layer-group"></i> All Levels</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec sec-white">
+    <div class="wrap">
+      <div class="shows-filter-bar" style="margin-bottom:3rem">
+        <button class="f-btn on" onclick="filterWS2('all',this)">All</button>
+        <button class="f-btn" onclick="filterWS2('pablo',this)">Pablo</button>
+        <button class="f-btn" onclick="filterWS2('kaida',this)">Kaida</button>
+        <button class="f-btn" onclick="filterWS2('duo',this)">Duo</button>
+        <button class="f-btn" onclick="filterWS2('family',this)">Family / Youth</button>
+        <button class="f-btn" onclick="filterWS2('corporate',this)">Corporate</button>
+      </div>
+      <div class="ws-grid" id="wgrid"></div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="wrap"><div class="cta-inner rv">
+      <div><div class="cta-label">Host a Workshop</div><h2 class="cta-title">Bring us to<br/>your space</h2><p class="cta-sub">Festivals · Studios · Corporate Teams · Schools · Wellness Events</p></div>
+      <div class="cta-btns rv d2"><a href="mailto:pablotalavera089@gmail.com?subject=Workshop Inquiry"><button class="btn btn-white"><i class="fas fa-envelope"></i> Enquire</button></a><button class="btn btn-outline-white" onclick="gp('shows')"><i class="fas fa-fire"></i> View Shows</button></div>
+    </div></div>
+  </section>
+
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a><a href="#" onclick="gp('contact')">Contact</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">Email Pablo</a></div>
+    <div class="foot-col"><h4>Book</h4><a href="#" onclick="gp('contact')">Book a Show</a><a href="#" onclick="gp('contact')">Book a Workshop</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera</p></div></div></footer>
+</div><!-- end workshops -->
+
+<div class="wmo" id="wmo" onclick="if(event.target===this)cwm()">
+  <div class="wm"><button class="wmc" onclick="cwm()"><i class="fas fa-times"></i></button>
+    <div class="wmt" id="m-body-header"></div><div class="wmb" id="m-body"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     GALLERY PAGE
+     ============================================================ -->
+<div id="pg-gallery" class="pg">
+  <section class="sec" style="padding-top:9rem;background:var(--off)">
+    <div class="wrap">
+      <div class="label rv"><i class="fas fa-images"></i> Visual Archive</div>
+      <h1 class="h-xl rv d1" style="margin-top:.4rem;margin-bottom:3rem"><em>Gallery</em></h1>
+      <div class="gallery-filter">
+        <button class="f-btn on" onclick="filterGal('all',this)">All</button>
+        <button class="f-btn" onclick="filterGal('fire',this)">Fire Shows</button>
+        <button class="f-btn" onclick="filterGal('theatre',this)">Theatre</button>
+        <button class="f-btn" onclick="filterGal('workshop',this)">Workshops</button>
+        <button class="f-btn" onclick="filterGal('kaida',this)">Kaida</button>
+        <button class="f-btn" onclick="filterGal('pablo',this)">Pablo</button>
+      </div>
+      <div class="gallery-grid rv d1" id="gallery-grid"></div>
+
+      <!-- Add image UI -->
+      <div style="margin-top:2.5rem;background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem" class="rv d2">
+        <div class="label" style="margin-bottom:1rem"><i class="fas fa-plus"></i> Add Image</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr auto;gap:.8rem;align-items:end">
+          <div><label class="cf-label" for="img-url">Image URL</label><input class="cf-input" id="img-url" type="url" placeholder="https://..." /></div>
+          <div><label class="cf-label" for="img-label">Label</label><input class="cf-input" id="img-label" type="text" placeholder="e.g. Fire Duet, Bangkok 2026" /></div>
+          <button class="btn btn-red" onclick="addGalleryImg()" style="height:46px;border-radius:10px;font-size:.7rem"><i class="fas fa-plus"></i> Add</button>
+        </div>
+        <div id="img-status" style="margin-top:.7rem;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em"></div>
+      </div>
+
+      <div class="media-hub" style="margin-top:3rem">
+        <section class="media-block rv">
+          <div class="media-block-head">
+            <h3 class="media-block-title">Photo Slideshow</h3>
+            <p class="media-block-sub">Gallery images displayed as a rotating slideshow. Add images above to populate it.</p>
+          </div>
+          <div class="slideshow-wrap">
+            <button class="slide-nav" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+            <div class="slide-frame" id="slide-frame"></div>
+            <button class="slide-nav" style="right:1rem" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </section>
+        <section class="media-block rv d2">
+          <div class="media-block-head">
+            <h3 class="media-block-title">Showreels</h3>
+            <p class="media-block-sub">Add YouTube, Vimeo, or Instagram reel links on the Media page to display them here.</p>
+          </div>
+          <div class="reel-grid" id="reel-grid-gal"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">Email Pablo</a></div>
+    <div class="foot-col"><h4>Book</h4><a href="#" onclick="gp('contact')">Book a Show</a><a href="#" onclick="gp('contact')">Book a Workshop</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera</p></div></div></footer>
+</div><!-- end gallery -->
+
+
+<!-- ============================================================
+     MEDIA PAGE
+     ============================================================ -->
+<div id="pg-media" class="pg">
+  <section class="sec" style="padding-top:9rem;background:var(--off)">
+    <div class="wrap">
+      <div class="label rv"><i class="fas fa-film"></i> Press & Media</div>
+      <h1 class="h-xl rv d1" style="margin-top:.4rem;margin-bottom:4rem"><em>Media</em></h1>
+
+      <!-- Showreels -->
+      <div class="rv d1" style="margin-bottom:4rem">
+        <div class="label" style="margin-bottom:1.5rem"><i class="fas fa-video"></i> Showreels</div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:1.5rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr auto;gap:.8rem;align-items:end">
+            <div><label class="cf-label" for="reel-title">Reel Title</label><input class="cf-input" id="reel-title" type="text" placeholder="e.g. Fire Duet Showreel"/></div>
+            <div><label class="cf-label" for="reel-url">YouTube / Vimeo URL</label><input class="cf-input" id="reel-url" type="url" placeholder="https://youtube.com/..."/></div>
+            <button class="btn btn-red" onclick="addReel()" style="height:46px;border-radius:10px;font-size:.7rem"><i class="fas fa-plus"></i> Add</button>
+          </div>
+        </div>
+        <div class="reel-grid" id="reel-grid"></div>
+      </div>
+
+      <!-- Downloads -->
+      <div class="rv d2" style="margin-bottom:4rem">
+        <div class="label" style="margin-bottom:1.5rem"><i class="fas fa-file-arrow-down"></i> Press Kit & Downloads</div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:1.5rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:.8rem;align-items:end">
+            <div><label class="cf-label" for="dl-title">Title</label><input class="cf-input" id="dl-title" type="text" placeholder="e.g. Press Kit 2026"/></div>
+            <div><label class="cf-label" for="dl-url">Google Drive Link</label><input class="cf-input" id="dl-url" type="url" placeholder="https://drive.google.com/..."/></div>
+            <div><label class="cf-label" for="dl-label">Button Label</label><input class="cf-input" id="dl-label" type="text" placeholder="Download PDF"/></div>
+            <button class="btn btn-red" onclick="addDownload()" style="height:46px;border-radius:10px;font-size:.7rem"><i class="fas fa-plus"></i> Add</button>
+          </div>
+        </div>
+        <div class="download-grid" id="download-grid"></div>
+      </div>
+
+      <!-- Schedule management -->
+      <div class="rv d3">
+        <div class="label" style="margin-bottom:1.5rem"><i class="fas fa-calendar-plus"></i> Add Event to Schedule</div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:.8rem;align-items:end;flex-wrap:wrap">
+            <div><label class="cf-label" for="evt-day">Day</label><input class="cf-input" id="evt-day" type="text" placeholder="24"/></div>
+            <div><label class="cf-label" for="evt-month">Month / Year</label><input class="cf-input" id="evt-month" type="text" placeholder="Jul 2026"/></div>
+            <div><label class="cf-label" for="evt-name">Event Name</label><input class="cf-input" id="evt-name" type="text" placeholder="OZORA Festival"/></div>
+            <div><label class="cf-label" for="evt-location">Location</label><input class="cf-input" id="evt-location" type="text" placeholder="Hungary"/></div>
+            <button class="btn btn-red" onclick="addEvent()" style="height:46px;border-radius:10px;font-size:.7rem"><i class="fas fa-plus"></i> Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">Email Pablo</a></div>
+    <div class="foot-col"><h4>Book</h4><a href="#" onclick="gp('contact')">Book a Show</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera</p></div></div></footer>
+</div><!-- end media -->
+
+
+<!-- ============================================================
+     CONTACT PAGE
+     ============================================================ -->
+<div id="pg-contact" class="pg">
+  <section class="contact-page">
+    <div class="wrap">
+      <div class="label rv"><i class="fas fa-envelope"></i> Get In Touch</div>
+      <h1 class="h-xl rv d1" style="margin-top:.4rem;margin-bottom:4rem">Contact<br><em>Us</em></h1>
+      <div class="contact-grid">
+        <div class="rv">
+          <p class="body" style="margin-bottom:3rem;font-family:'DM Serif Display',serif;font-size:1.2rem;font-style:italic;color:var(--ink);line-height:1.6">"Each performance is a conversation — let's start ours."</p>
+          <div class="contact-info-block"><div class="ci-label">Email — Pablo</div><div class="ci-val"><a href="mailto:pablotalavera089@gmail.com">pablotalavera089@gmail.com</a></div></div>
+          <div class="contact-info-block"><div class="ci-label">Instagram</div><div class="ci-val"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div></div>
+          <div class="contact-info-block"><div class="ci-label">Available For</div><div class="ci-val" style="font-family:'Outfit',sans-serif;font-size:.9rem;line-height:2;color:var(--mid)">Shows · Workshops · Festivals<br>Residencies · Corporate · Fire Safety</div></div>
+          <div class="contact-info-block"><div class="ci-label">Currently Based</div><div class="ci-val" style="font-family:'Outfit',sans-serif;font-size:.9rem;color:var(--mid)">Thailand<br><span style="font-size:.78rem;color:var(--dust)">Europe: July–September 2026</span></div></div>
+          <div class="contact-info-block"><div class="ci-label">Response Time</div><div class="ci-val" style="font-family:'Outfit',sans-serif;font-size:.88rem;color:var(--mid)">Within 48 hours</div></div>
+
+          <!-- Schedule table in contact -->
+          <div style="margin-top:3rem">
+            <div class="label" style="margin-bottom:1.2rem"><i class="fas fa-calendar"></i> 2026 Schedule</div>
+            <div class="sched-list" id="sched-list-contact" style="background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--border)"></div>
+          </div>
+        </div>
+
+        <div class="rv d1">
+          <div class="contact-form-box">
+            <div id="contactForm">
+              <h3 class="h-sm" style="margin-bottom:1.8rem">Send a Message</h3>
+              <div class="cf-grid">
+                <div><label class="cf-label" for="cf-first">First Name</label><input class="cf-input" id="cf-first" type="text" placeholder="Your name"/></div>
+                <div><label class="cf-label" for="cf-last">Last Name</label><input class="cf-input" id="cf-last" type="text" placeholder="Last name"/></div>
+              </div>
+              <div style="margin-bottom:1rem"><label class="cf-label" for="cf-email">Email</label><input class="cf-input" id="cf-email" type="email" placeholder="your@email.com"/></div>
+              <div style="margin-bottom:1rem"><label class="cf-label" for="cf-type">Enquiry Type</label>
+                <select class="cf-input cf-select" id="cf-type">
+                  <option value="">Select enquiry type…</option>
+                  <option>Book a Show — Fire Duet</option>
+                  <option>Book a Show — Kaidablo Duo</option>
+                  <option>Book a Show — Daytime / LED</option>
+                  <option>Book a Show — Kaida Sword Solo</option>
+                  <option>Book a Show — Between Worlds (Pablo Solo)</option>
+                  <option>Book a Show — Baggage / Red Eye (Ensemble)</option>
+                  <option>Book a Workshop — Pablo</option>
+                  <option>Book a Workshop — Kaida</option>
+                  <option>Book a Workshop — Duo</option>
+                  <option>Fire Safety Coordination</option>
+                  <option>Festival / Residency</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div style="margin-bottom:1rem"><label class="cf-label" for="cf-event">Event / Festival & Date</label><input class="cf-input" id="cf-event" type="text" placeholder="e.g. Ozora Festival, July 2026"/></div>
+              <div><label class="cf-label" for="cf-msg">Message</label><textarea class="cf-textarea" id="cf-msg" placeholder="Tell us about your event, venue, audience, and what you're looking for…"></textarea></div>
+              <button class="cf-submit" onclick="submitCF()">Send Message <i class="fas fa-paper-plane" style="margin-left:.3rem"></i></button>
+              <p class="cf-note">We typically respond within 48 hours</p>
+            </div>
+            <div class="cf-success" id="cf-success">
+              <i class="fas fa-circle-check" style="font-size:2.5rem;color:var(--green);margin-bottom:1rem;display:block"></i>
+              <h3 class="h-md" style="color:var(--red)">Message Sent!</h3>
+              <p class="body">Thank you for reaching out. We'll be in touch within 48 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="wrap"><div class="foot-grid">
+    <div><div class="foot-logo">KAIDA<em>BLO</em></div><p class="foot-tag">A living dialogue between fire and body.</p><div class="foot-social"><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a><a href="mailto:pablotalavera089@gmail.com">Email</a></div></div>
+    <div class="foot-col"><h4>Pages</h4><a href="#" onclick="gp('about')">About</a><a href="#" onclick="gp('shows')">Shows</a><a href="#" onclick="gp('workshops')">Workshops</a><a href="#" onclick="gp('gallery')">Gallery</a></div>
+    <div class="foot-col"><h4>Contact</h4><a href="mailto:pablotalavera089@gmail.com">Email Pablo</a><a href="https://instagram.com/echo_between" target="_blank">@echo_between</a></div>
+    <div class="foot-col"><h4>Book</h4><a href="#" onclick="gp('contact')">Book a Show</a><a href="#" onclick="gp('contact')">Book a Workshop</a></div>
+  </div><div class="foot-bottom"><p class="foot-copy">© 2026 Kaida &amp; Pablo Talavera · All rights reserved</p></div></div></footer>
+</div><!-- end contact -->
+
+
+<!-- ============================================================
+     LINKTREE PAGE
+     ============================================================ -->
+<div id="pg-linktree" class="pg">
+  <div class="lt-page">
+    <div class="lt-inner">
+      <div class="lt-avatar"><img src="https://res.cloudinary.com/dol2caucl/image/upload/v1775277974/20260212-fof-008_pwnhod.jpg" alt="Kaidablo"/></div>
+      <h1 class="lt-name">KAIDABLO</h1>
+      <p class="lt-sub">Fire · Dance · Acrobatics</p>
+      <p class="lt-desc">Kaida &amp; Pablo — performance artists exploring the dialogue between fire, body, and space. Available for shows, workshops, and festivals worldwide.</p>
+      <div class="lt-list" id="linktree-grid"></div>
+    </div>
+  </div>
+  <footer style="padding:2rem 0;text-align:center"><p class="foot-copy" style="color:var(--dust)">© 2026 Kaidablo · Kaida &amp; Pablo Talavera</p></footer>
+</div>
+
+</main>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ---- CURSOR ---- */
+const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function loop(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,input,select,textarea').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='14px';cur.style.height='14px';curR.style.width='46px';curR.style.height='46px';curR.style.borderColor='rgba(192,57,43,.5)'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='7px';cur.style.height='7px';curR.style.width='30px';curR.style.height='30px';curR.style.borderColor='rgba(192,57,43,.3)'});
+});
+
+/* ---- NAV SCROLL ---- */
+const nav=document.getElementById('mnav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+
+/* ---- MOBILE MENU ---- */
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
+function closeMob(){document.getElementById('mobNav').classList.remove('open')}
+
+/* ---- PAGE ROUTING ---- */
+const pages=['home','about','shows','workshops','gallery','media','contact','linktree'];
+function gp(id){
+  if(!pages.includes(id))return;
+  pages.forEach(p=>{
+    const el=document.getElementById('pg-'+p);
+    if(el)el.classList.toggle('on',p===id);
+    const nl=document.getElementById('nl-'+p);
+    if(nl)nl.classList.toggle('act',p===id);
+    const pb=document.getElementById('pb-'+p);
+    if(pb)pb.classList.toggle('on',p===id);
+  });
+  window.scrollTo({top:0,behavior:'instant'});
+  setTimeout(initReveal,60);
+  if(id==='contact')setTimeout(()=>{const c=document.getElementById('sched-list-contact');if(c)renderSchedContact()},80);
+}
+
+/* ---- REVEAL ---- */
+function initReveal(){
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll('.rv:not(.in)').forEach(el=>obs.observe(el));
+}
+initReveal();
+
+/* ---- DATA STORE ---- */
+const KEYS={gallery:'kdb_gallery',schedule:'kdb_schedule',downloads:'kdb_downloads',reels:'kdb_reels'};
+function rd(key,fb){try{const r=localStorage.getItem(key);if(!r)return fb.slice();const p=JSON.parse(r);return Array.isArray(p)?p:fb.slice()}catch{return fb.slice()}}
+function wr(key,val){try{localStorage.setItem(key,JSON.stringify(val))}catch{}}
+
+const DEF_GALLERY=[
+  {url:'https://res.cloudinary.com/dol2caucl/image/upload/v1775277974/20260212-fof-008_pwnhod.jpg',label:'Fire Performance — Fai Jai 2025',cat:'fire pablo'},
+  {url:'https://res.cloudinary.com/dol2caucl/image/upload/v1775277891/20260210-fof-030-2_agzdiu.jpg',label:'Contact Dance — Thailand',cat:'fire duo'},
+  {url:'https://res.cloudinary.com/dol2caucl/image/upload/v1775277977/20260212-fof-003_aer5iw.jpg',label:'Performance — Fai Jai 2025',cat:'pablo theatre'},
+  {url:'https://res.cloudinary.com/dol2caucl/image/upload/v1775277979/20260212-fof-004_bfxfoh.jpg',label:'Fire Show — Thailand',cat:'fire duo'}
+];
+const DEF_SCHED=[
+  {day:'03',month:'Feb 2025',event:'Fai Jai Flow Festival',location:'Pai, Thailand',badgeIcon:'fas fa-fire',badgeText:'Fire',past:true},
+  {day:'01',month:'Apr 2026',event:'OZORA Application Deadline',location:'Hungary',badgeIcon:'fas fa-hourglass-half',badgeText:'Apply',past:false},
+  {day:'24',month:'Jul 2026',event:'OZORA Festival',location:'Hungary',badgeIcon:'fas fa-music',badgeText:'Festival',past:false},
+  {day:'01',month:'Aug 2026',event:'EJC 2026 — European Juggling Convention',location:'Slovenia',badgeIcon:'fas fa-star',badgeText:'Convention',past:false},
+  {day:'13',month:'Aug 2026',event:'Roztoc Festival',location:'Czech Republic',badgeIcon:'fas fa-tree',badgeText:'Festival',past:false}
+];
+
+let gallery=rd(KEYS.gallery,DEF_GALLERY);
+let schedule=rd(KEYS.schedule,DEF_SCHED);
+let downloads=rd(KEYS.downloads,[]);
+let reels=rd(KEYS.reels,[]);
+let slideIdx=0,slideTimer=null;
+
+/* ---- GALLERY ---- */
+let galCat='all';
+function renderGallery(){
+  const grid=document.getElementById('gallery-grid');
+  if(!grid)return;
+  const filtered=galCat==='all'?gallery:gallery.filter(i=>i.cat&&i.cat.includes(galCat));
+  if(!filtered.length){grid.innerHTML='<div class="gal-placeholder-item"><i class="fas fa-image"></i><span>No images yet — add one above</span></div>';return}
+  grid.innerHTML=filtered.map((img,i)=>`
+    <div class="gal-item" onclick="updateHeroImg('${img.url}')" role="listitem">
+      <img src="${img.url}" alt="${img.label}" loading="lazy"/>
+      <div class="gal-overlay">${img.label}</div>
+      <button class="gal-del" onclick="event.stopPropagation();delGal(${gallery.indexOf(img)})" title="Remove"><i class="fas fa-trash-alt"></i></button>
+    </div>`).join('');
+  renderSlideshow();
+  renderArtistMiniGalleries();
+}
+function filterGal(cat,btn){
+  galCat=cat;
+  document.querySelectorAll('.gallery-filter .f-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderGallery();
+}
+function addGalleryImg(){
+  const url=document.getElementById('img-url')?.value.trim();
+  const label=document.getElementById('img-label')?.value.trim()||'Kaidablo Photo';
+  if(!url){alert('Please enter an image URL');return}
+  gallery.unshift({url,label,cat:'all'});
+  wr(KEYS.gallery,gallery);
+  renderGallery();
+  document.getElementById('img-url').value='';
+  document.getElementById('img-label').value='';
+  const s=document.getElementById('img-status');
+  if(s){s.innerHTML='<span style="color:var(--green)"><i class="fas fa-check"></i> Image added!</span>';setTimeout(()=>s.innerHTML='',3000)}
+}
+function delGal(i){gallery.splice(i,1);wr(KEYS.gallery,gallery);renderGallery()}
+function updateHeroImg(url){
+  const mi=document.getElementById('hero-img-main');
+  const si=document.getElementById('hero-img-sub');
+  if(si){si.src=url}else if(mi){mi.src=url}
+}
+function renderArtistMiniGalleries(){
+  const kg=document.getElementById('kaida-gallery-mini');
+  const pg=document.getElementById('pablo-gallery-mini');
+  const kImgs=gallery.filter(i=>i.cat&&i.cat.includes('kaida')).slice(0,6);
+  const pImgs=gallery.filter(i=>i.cat&&i.cat.includes('pablo')).slice(0,6);
+  const ph='<div class="amg-placeholder"><i class="fas fa-image"></i><span>Add images</span></div>';
+  if(kg){if(!kImgs.length){kg.innerHTML=[1,2,3].map(()=>`<div class="amg-item">${ph}</div>`).join('');} else{kg.innerHTML=kImgs.map(i=>`<div class="amg-item"><img src="${i.url}" alt="${i.label}" loading="lazy"/></div>`).join('')}}
+  if(pg){if(!pImgs.length){pg.innerHTML=[1,2,3].map(()=>`<div class="amg-item">${ph}</div>`).join('');} else{pg.innerHTML=pImgs.map(i=>`<div class="amg-item"><img src="${i.url}" alt="${i.label}" loading="lazy"/></div>`).join('')}}
+}
+
+/* ---- SLIDESHOW ---- */
+function renderSlideshow(){
+  const frame=document.getElementById('slide-frame');
+  if(!frame)return;
+  if(!gallery.length){frame.innerHTML='<div class="slide-empty">Add images in Gallery to build slideshow</div>';return}
+  slideIdx=((slideIdx%gallery.length)+gallery.length)%gallery.length;
+  const img=gallery[slideIdx];
+  frame.innerHTML=`<img src="${img.url}" alt="${img.label}" loading="lazy" style="width:100%;height:100%;object-fit:cover"/><div class="slide-caption">${img.label}</div>`;
+  if(slideTimer)clearInterval(slideTimer);
+  if(gallery.length>1)slideTimer=setInterval(()=>{slideIdx=(slideIdx+1)%gallery.length;renderSlideshow()},5000);
+}
+function nextSlide(){slideIdx=(slideIdx+1)%gallery.length;renderSlideshow()}
+function prevSlide(){slideIdx=(slideIdx-1+gallery.length)%gallery.length;renderSlideshow()}
+
+/* ---- SCHEDULE ---- */
+function renderSched(id){
+  const list=document.getElementById(id);
+  if(!list)return;
+  list.innerHTML=schedule.map(item=>`
+    <div class="sched-row ${item.past?'past':''}">
+      <div><div class="sched-day">${item.day}</div><div class="sched-month">${item.month}</div></div>
+      <div><div class="sched-event">${item.event}</div><div class="sched-loc"><i class="fas fa-map-pin"></i> ${item.location}</div></div>
+      <span class="sched-badge"><i class="${item.badgeIcon||'fas fa-star'}"></i> ${item.badgeText||'Event'}</span>
+    </div>`).join('');
+}
+function renderSchedContact(){renderSched('sched-list-contact')}
+function addEvent(){
+  const day=document.getElementById('evt-day')?.value.trim();
+  const month=document.getElementById('evt-month')?.value.trim();
+  const name=document.getElementById('evt-name')?.value.trim();
+  const loc=document.getElementById('evt-location')?.value.trim();
+  if(!day||!month||!name||!loc){alert('Please fill all fields');return}
+  schedule.push({day,month,event:name,location:loc,badgeIcon:'fas fa-star',badgeText:'Event',past:false});
+  wr(KEYS.schedule,schedule);
+  renderSched('sched-list');
+  ['evt-day','evt-month','evt-name','evt-location'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});
+  alert('Event added!');
+}
+
+/* ---- REELS ---- */
+function normalizeReel(url){
+  if(!url)return'';
+  try{
+    const p=new URL(url);const h=p.hostname.replace(/^www\./,'');const path=p.pathname.replace(/\/$/,'');
+    if(h.includes('youtu.be')){const id=path.split('/').filter(Boolean)[0];if(id)return`https://www.youtube-nocookie.com/embed/${id}`}
+    if(h.includes('youtube.com')){const w=p.searchParams.get('v');if(w)return`https://www.youtube-nocookie.com/embed/${w}`;const s=path.match(/\/shorts\/([a-zA-Z0-9_-]+)/);if(s)return`https://www.youtube-nocookie.com/embed/${s[1]}`}
+    if(h.includes('vimeo.com')){const m=path.match(/\/(\d+)/);if(m)return`https://player.vimeo.com/video/${m[1]}`}
+  }catch{}
+  return url;
+}
+function renderReels(){
+  ['reel-grid','reel-grid-gal'].forEach(gid=>{
+    const grid=document.getElementById(gid);
+    if(!grid)return;
+    grid.innerHTML=reels.length?reels.map((item,i)=>`
+      <article class="reel-card">
+        <iframe class="reel-frame" src="${normalizeReel(item.url)}" title="${item.title}" loading="lazy" allowfullscreen></iframe>
+        <div class="reel-info"><div><div class="reel-name">${item.title}</div><div class="reel-source">${item.label||'Showreel'}</div></div>
+        <a class="mini-link" href="${item.url}" target="_blank">Open</a></div>
+      </article>`).join(''):'<div class="media-empty">No showreels yet. Add a YouTube or Vimeo link above.</div>';
+  });
+}
+function addReel(){
+  const title=document.getElementById('reel-title')?.value.trim();
+  const url=document.getElementById('reel-url')?.value.trim();
+  if(!title||!url){alert('Fill reel title and link');return}
+  reels.unshift({title,url,label:'Showreel'});
+  wr(KEYS.reels,reels);renderReels();
+  ['reel-title','reel-url'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});
+}
+
+/* ---- DOWNLOADS ---- */
+function normalizeDownload(url){
+  const m=url.match(/drive\.google\.com\/(?:file\/d\/|open\?id=)([a-zA-Z0-9_-]+)/);
+  return m?`https://drive.google.com/uc?export=download&id=${m[1]}`:url;
+}
+function renderDownloads(){
+  const grid=document.getElementById('download-grid');
+  if(!grid)return;
+  grid.innerHTML=downloads.length?downloads.map((item,i)=>`
+    <a class="download-card" href="${normalizeDownload(item.url)}" target="_blank" rel="noopener">
+      <div class="download-icon"><i class="${item.icon||'fas fa-file-pdf'}"></i></div>
+      <div><div class="download-title">${item.title}</div><div class="download-label">${item.label||'Download'}</div></div>
+    </a>`).join(''):'<div class="media-empty">No downloads yet. Add a Google Drive press kit link above.</div>';
+}
+function addDownload(){
+  const title=document.getElementById('dl-title')?.value.trim();
+  const url=document.getElementById('dl-url')?.value.trim();
+  const label=document.getElementById('dl-label')?.value.trim()||'Download';
+  if(!title||!url){alert('Fill title and URL');return}
+  downloads.unshift({title,url,label,icon:'fas fa-file-pdf'});
+  wr(KEYS.downloads,downloads);renderDownloads();
+  ['dl-title','dl-url','dl-label'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});
+}
+
+/* ---- SHOWS DATA & RENDER ---- */
+const SHOWS=[
+  {id:'fireduo',title:'Fire Duet — Tension & Flame',type:'Duo · Adults · Fire',desc:'Epic, progressive, and deeply sensual. Two bodies navigate a living dialogue through fire — palm torches, swords, and contact dance. Softness meets intensity in a conversation that can never be repeated.',tags:['duo','fire','adults'],chips:['Duo','Adults','Fire','≈ 10 min'],specs:[['Duration','≈ 10 min'],['Audience','Adults'],['Props','Swords · Palms · Staff'],['Style','Contemporary · Contact · Stage Combat']],ov:'The signature fire duet. Drawing on contact dance, martial arts, and contemporary movement, this show investigates how tension and proximity create a dialogue between two movers. Epic, progressive, and deeply sensual.',aud:['Festival audiences (outdoor / stage)','Private events and weddings','Theatre venues'],obj:['Experience the dialogue between two bodies and fire','Blend of contemporary dance, stage combat and contact improv','Music: Future Rain — dark, elegant, edgy atmosphere']},
+  {id:'warrior',title:'Kaidablo — Warrior Dialogue',type:'Duo · Adults · Martial Arts · Fire',desc:'The signature full show. Martial arts meets contact improvisation — warrior energy, fluid grace, and partner acrobatics. An in-depth research of movement dynamics and flame interaction.',tags:['duo','fire','adults'],chips:['Duo','Adults','Fire','15–20 min'],specs:[['Duration','15–20 min'],['Audience','Adults'],['Props','Staff · Dragon · Sword · Palms'],['Intensity','High — Warrior Energy']],ov:'The full Kaidablo signature show. Each section moves from playful discovery through intense dialogue to resolution — always keeping the audience engaged through highs and lows, texture and contrast.',aud:['Festival main stage','Outdoor events','Theatre venues'],obj:['Full arc from playful discovery to intense resolution','Showcases shared vocabulary: contact, acro, fire, martial arts','Partner acrobatics including reverse bird, standing lifts, floorwork']},
+  {id:'daytime',title:'Daytime & LED Show',type:'Duo · All Ages · No Fire',desc:'A vibrant, accessible daytime performance combining contact improvisation, dance lifts, hoop, fans, silk fans, and veil poi. LED version available for indoor events.',tags:['duo','family'],chips:['Duo','Family Friendly','All Ages','Flexible'],specs:[['Duration','Flexible'],['Audience','All Ages'],['Props','Hoop · Fans · Veil Poi · Silk Fans'],['Fire Required','No — LED Option Available']],ov:'Visually stunning without fire. Perfect for family festivals, daytime events, mixed audiences, and venues where fire is not permitted. LED version available for indoor events and corporate settings.',aud:['Family festivals','Daytime events','Corporate events','Indoor venues'],obj:['Full visual spectacle without fire','Suitable for all ages including children','LED version available for indoor use']},
+  {id:'kaidasolo',title:'Kaida — Sword Solo',type:'Solo — Kaida · Adults · Martial Arts',desc:'Sassy, powerful, technically refined. A solo wushu and contemporary fusion featuring sword, doubles, fans, and percussive TKD kicks.',tags:['solo','kaida'],chips:['Solo','Kaida','Adults','5–8 min'],specs:[['Duration','5–8 min'],['Audience','Adults'],['Props','Sword · Doubles · Fan'],['Style','Wushu · Contemporary · Martial Arts']],ov:'Pure martial artistry meets theatrical presence. Coffee-grinder double sweeps to sharp stillness — the full range of Kaida\'s solo vocabulary.',aud:['Festival audiences','Theatre venues','Event entertainment'],obj:['Showcase Kaida\'s martial arts technical range','Fusion of Wushu, contemporary dance and stage presence','Can be paired with Pablo\'s solo for a double bill']},
+  {id:'baggage',title:'Baggage / Red Eye',type:'Ensemble · 5 Performers · Adults · Theatre',desc:'A physical theatre ensemble piece set in a timeless departure lounge. Five performers carry their baggage from isolation to shared flight. Ends in fire.',tags:['theatre','adults','fire'],chips:['Ensemble','5 Performers','Adults','Fire Finale','30–45 min'],specs:[['Duration','30–45 min'],['Audience','Adults'],['Cast','5 Performers'],['Props','Suitcases · Fire Finale']],ov:'Different travellers at different life thresholds carry their baggage in different ways — the Perfectionist, the Exhausted, the Adventurer, the Anxious Multitasker, the Straggler. What weighed you down becomes what lifts you. Ends in fire.',aud:['Theatre festivals','Fringe / arts festivals','Large outdoor events'],obj:['Physical theatre with fire finale','5-performer ensemble piece with distinct characters','Universal themes of identity, travel, letting go']},
+  {id:'betweenworlds',title:'Between Worlds — Dream Sand',type:'Solo — Pablo · Adults · Physical Theatre',desc:'Pablo\'s autobiographical solo. Dance, monologue, and symbolic action explore memory, lost dreams, and identity through the dialogue of Dancer and Shadow. Available in German and English.',tags:['solo','pablo','theatre'],chips:['Solo','Pablo','Adults','10–60 min','DE / EN'],specs:[['Duration','10–60 min'],['Language','German / English'],['Venue','Black Box · 6×6m min'],['Style','Contemporary Dance · Physical Theatre']],ov:'A poetic journey through inner landscapes — with sand, candles, and looping choreography that reveals its own reflection. Winner of festival invitations across Europe.',aud:['Theatre festivals','Black box venues','Arts centres'],obj:['Autobiographical performance exploring memory and identity','Interplay of Dancer and Shadow figure','Sound design, voice-over, sand and candlelight staging']},
+];
+
+let showCat='all';
+function renderShows(){
+  const list=document.getElementById('shows-list');
+  if(!list)return;
+  const filtered=showCat==='all'?SHOWS:SHOWS.filter(s=>s.tags.includes(showCat));
+  list.innerHTML=filtered.map((s,i)=>`
+    <div class="show-row" onclick="openShowModal(${SHOWS.indexOf(s)})" data-cats="${s.tags.join(' ')}">
+      <div class="show-row-num">${String(i+1).padStart(2,'0')}</div>
+      <div class="show-row-body">
+        <div class="show-row-title">${s.title}</div>
+        <div class="show-row-type">${s.type}</div>
+        <p class="show-row-desc">${s.desc}</p>
+        <div class="show-row-tags">${s.chips.map(c=>`<span class="chip ${c==='Family Friendly'||c==='All Ages'?'chip-gold':c==='Duo'||c==='Fire'?'chip-red':''}">${c}</span>`).join('')}</div>
+      </div>
+      <div class="show-row-meta">
+        ${s.specs.slice(0,3).map(sp=>`<div class="srm-item"><div class="srm-label">${sp[0]}</div><div class="srm-val">${sp[1]}</div></div>`).join('')}
+        <button class="btn btn-outline-red" style="font-size:.65rem;padding:.6rem 1.2rem;border-radius:999px;margin-top:.5rem" onclick="event.stopPropagation();openShowModal(${SHOWS.indexOf(s)})">Full Details</button>
+      </div>
+    </div>`).join('');
+}
+function filterShows(cat,btn){
+  showCat=cat;
+  document.querySelectorAll('.shows-filter-bar .f-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderShows();
+}
+function openShowModal(i){
+  const s=SHOWS[i];
+  document.getElementById('sm-head').innerHTML=`<button class="sm-close" onclick="closeShowModal()"><i class="fas fa-times"></i></button><div class="sm-title">${s.title}</div><div class="sm-type">${s.type}</div>`;
+  document.getElementById('sm-body').innerHTML=`
+    <div class="sm-section-title">Overview</div><p>${s.ov}</p>
+    <div class="sm-section-title" style="margin-top:1.5rem">Technical Specs</div>
+    <div class="sm-specs">${s.specs.map(sp=>`<div class="sm-spec-item"><div class="sm-spec-key">${sp[0]}</div><div class="sm-spec-val">${sp[1]}</div></div>`).join('')}</div>
+    <div class="sm-section-title" style="margin-top:1.5rem">Suitable For</div>
+    <ul>${(s.aud||[]).map(a=>`<li>${a}</li>`).join('')}</ul>
+    <div class="sm-section-title" style="margin-top:1.5rem">Key Features</div>
+    <ul>${(s.obj||[]).map(o=>`<li>${o}</li>`).join('')}</ul>
+    <div style="display:flex;gap:.8rem;margin-top:2rem;flex-wrap:wrap"><a href="mailto:pablotalavera089@gmail.com?subject=Booking Enquiry: ${s.title}"><button class="btn btn-red"><i class="fas fa-envelope"></i> Book This Show</button></a></div>`;
+  document.getElementById('showModal').classList.add('open');
+}
+function closeShowModal(){document.getElementById('showModal').classList.remove('open')}
+
+/* ---- WORKSHOPS DATA & RENDER ---- */
+const WS=[
+  {num:'01',title:'Physical Preparation',sub:'The Performer\'s Body — Strength, Mobility & Readiness',by:'pablo',dur:'90 min / Half Day',cats:'pablo all',tags:['pablo','all levels'],ov:'Smart, functional physical toolkit built on 8 years of circus and somatic experience. Joint mobility, functional strength for performers, injury prevention and body intelligence.',aud:['Circus and dance students','Festival warm-up slot','Theater companies','Yoga and wellness studios'],obj:['Develop a personal, sustainable warm-up routine','Build functional strength and mobility for performance','Learn injury prevention and body listening']},
+  {num:'02',title:'Spatial Awareness & The Seven Spaces',sub:'A Journey Through Seven Spatial Layers',by:'pablo',dur:'1 Hour / Half Day',cats:'pablo all',tags:['pablo','all levels'],ov:'Practical and theoretical exploration of spatial awareness in dance, movement, and physical theatre. Rooted in Rudolf Laban\'s Movement Analysis and 8 years of professional stage and circus practice.',aud:['Performers, dancers, physical theatre artists','Theater students','Circus artists wanting stronger stage composition','Movement teachers'],obj:['Develop awareness of body, self, others, and environment','Improve movement clarity, control, and composition','Strengthen group coordination and collective perception']},
+  {num:'03',title:'Partner Movement',sub:'Dialogue in Motion — Communication, Weight & Trust',by:'pablo',dur:'90 min / Half Day',cats:'pablo duo all corporate',tags:['pablo','duo','beginner'],ov:'A workshop about learning to move with someone — not just next to them. Weight sharing, counter-balance, momentum, listening through touch. No dance experience needed. Also available as corporate team-building.',aud:['General public and wellness festivals','Corporate teams (team-building)','Theater and dance students','Couples, friends, communities'],obj:['Experience movement as non-verbal dialogue','Develop physical communication and listening','Build trust through shared weight and contact']},
+  {num:'04',title:'Beginner Acrobatics',sub:'Your First Flight — Safe, Playful Entry into Acro',by:'pablo',dur:'90 min',cats:'pablo family all',tags:['pablo','beginner','family'],ov:'An entry-level acrobatics workshop that removes fear and builds foundations. Rolls, cartwheels, handstands, basic partner lifts. Maximum 16 participants for safety.',aud:['Complete beginners (adults)','Children and youth programs','Festival family slot','Dance students adding acro vocabulary'],obj:['Learn to fall safely and confidently','Build foundational floor skills: rolls, cartwheels, balance','Develop body awareness and spatial orientation']},
+  {num:'05',title:'Partner Acrobatics',sub:'Base & Flyer — The Art of Shared Flight',by:'pablo',dur:'Half Day / Full Day',cats:'pablo duo all',tags:['pablo','duo','intermediate'],ov:'The intermediate progression from Beginner Acrobatics. L-basing, standing acro, shoulder stands, forward-flying. Technical precision meets artistic framing.',aud:['Circus artists (cross-training)','Dancers adding acro vocabulary','Contact improv practitioners','Festival acro community'],obj:['Master fundamental L-base positions and transitions','Develop standing acro: shoulder stand, thigh stand','Apply acrobatics as artistic language in a duet']},
+  {num:'06',title:'Contact Staff',sub:'Object as Extension — Body & Staff as One',by:'pablo',dur:'90 min / Half Day',cats:'pablo all',tags:['pablo','all levels'],ov:'Pablo\'s most personal and highest-level offering. Contact staff is a niche discipline with a devoted, growing community across the European festival and flow arts circuit.',aud:['Flow arts and circus festival community','Circus artists adding prop manipulation','Dancers interested in object work'],obj:['Learn grip positions, weight sensing, basic isolations','Build core vocabulary: rolls, passes, spins','Develop spatial awareness and performance with a prop']},
+  {num:'07',title:'Contact Improvisation',sub:'The Moving Conversation — Presence, Touch & Shared Weight',by:'pablo',dur:'90 min / Multi-Day',cats:'pablo duo all',tags:['pablo','duo','all levels'],ov:'Contact improvisation from the ground up: safety, touch, gravity, falling, flying — while holding the poetic dimension of it as a living, breathing conversation between bodies.',aud:['CI festival community','Dance and somatic movement practitioners','Theater makers','Wellness and yoga communities'],obj:['Understand the principles of contact improvisation','Develop sensitivity to weight, momentum, shared contact','Experience free-form movement improvisation']},
+  {num:'08',title:'Martial Arts & Stage Combat',sub:'Wushu · FMA · Film Fighting',by:'kaida',dur:'Flexible Duration',cats:'kaida duo all',tags:['kaida','duo','all levels'],ov:'Foundational Wushu forms to Filipino Martial Arts and film fighting techniques. Kaida integrates martial discipline with contemporary dance — powerful, precise, and artistically rich.',aud:['Dancers wanting martial vocabulary','Physical theatre performers','Film / stage actors','Festival workshops'],obj:['Learn Wushu forms and FMA fundamentals','Explore film fighting and stage combat','Integrate martial arts with contemporary movement']},
+  {num:'09',title:'Duo Fire Flow',sub:'Partner Fire Performance — Proximity, Sync & Trust',by:'duo',dur:'Half Day',cats:'duo all',tags:['duo','intermediate+'],ov:'Taught together by Kaida & Pablo. The dynamics of two bodies moving with fire props — passing, syncing, and creating shapes while navigating shared space safely and with artistic intention.',aud:['Flow arts and fire performance community','Partner performers wanting to collaborate','Intermediate+ fire performers'],obj:['Explore passing, syncing, and creating shapes together','Integrate fire safety into partner choreography','Develop shared movement language with props']},
+];
+
+function renderWS(){
+  const grid=document.getElementById('wgrid');
+  if(!grid)return;
+  grid.innerHTML=WS.filter(w=>wsCat==='all'||w.cats.includes(wsCat)).map((w,i)=>`
+    <article class="wcard rv d${(i%3)+1}" role="listitem">
+      <div class="wcard-header">
+        <div class="wcard-num">${w.num}</div>
+        <div class="wcard-tags">
+          ${w.tags.map(t=>`<span class="chip ${t==='pablo'?'chip-red':t==='kaida'?'chip-gold':t==='duo'?'chip-dark':''} " style="font-size:.54rem">${t}</span>`).join('')}
+        </div>
+      </div>
+      <div class="wcard-ico"><i class="fas fa-${w.by==='pablo'?'wand-sparkles':w.by==='kaida'?'khanda':'users'}"></i></div>
+      <h3 class="wcard-title">${w.title}</h3>
+      <p class="wcard-sub">${w.sub}</p>
+      <p class="wcard-desc">${w.ov.slice(0,140)}…</p>
+      <div class="wcard-footer">
+        <span class="wcard-dur">${w.dur}</span>
+        <button class="wcard-open" onclick="owm(${WS.indexOf(w)})">Details</button>
+      </div>
+    </article>`).join('');
+}
+let wsCat='all';
+function filterWS2(cat,btn){
+  wsCat=cat;
+  document.querySelectorAll('#pg-workshops .shows-filter-bar .f-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderWS();
+  setTimeout(initReveal,40);
+}
+function owm(i){
+  const w=WS[i];
+  document.getElementById('m-body-header').innerHTML=`<button class="wmc" onclick="cwm()"><i class="fas fa-times"></i></button><div class="wm-ttl">${w.title}</div><div class="wm-sub">${w.sub} · ${w.dur}</div>`;
+  document.getElementById('m-body').innerHTML=`<div class="wmst">Overview</div><p>${w.ov}</p><div class="wmst" style="margin-top:1.5rem">Who It\'s For</div><ul>${(w.aud||[]).map(a=>`<li><i class="fas fa-arrow-right" style="color:var(--red);margin-right:.5rem"></i>${a}</li>`).join('')}</ul><div class="wmst" style="margin-top:1.5rem">Objectives</div><ul>${(w.obj||[]).map(o=>`<li><i class="fas fa-check" style="color:var(--red);margin-right:.5rem"></i>${o}</li>`).join('')}</ul><div style="margin-top:2rem;display:flex;gap:.8rem"><a href="mailto:pablotalavera089@gmail.com?subject=Workshop Enquiry: ${w.title}"><button class="btn btn-red" style="font-size:.7rem"><i class="fas fa-envelope"></i> Enquire</button></a></div>`;
+  document.getElementById('wmo').classList.add('open');
+}
+function cwm(){document.getElementById('wmo').classList.remove('open')}
+
+/* ---- TESTIMONIALS ---- */
+const TESTI=[
+  {stars:5,quote:'"Absolutely breathtaking. The fire duet held the entire audience in silence — a rare and powerful thing at a festival."',author:'Maria K.',role:'Festival Director, Hungary'},
+  {stars:5,quote:'"Pablo\'s workshop on spatial awareness completely changed how I think about performing. One of the best teachers I\'ve encountered."',author:'Anna V.',role:'Circus Artist, Berlin'},
+  {stars:5,quote:'"Kaida\'s martial arts precision combined with Pablo\'s fluid physicality creates something you can\'t look away from. Exceptional."',author:'Tom R.',role:'Arts Programmer, Amsterdam'},
+  {stars:5,quote:'"We booked them for our festival and received more positive feedback about their show than any other act. Will definitely rebook."',author:'Sophie M.',role:'Event Producer, Switzerland'},
+];
+let tIdx=0;
+function renderTesti(){
+  const inner=document.getElementById('carouselInner');
+  const dots=document.getElementById('carouselDots');
+  if(!inner||!dots)return;
+  inner.innerHTML=TESTI.map(t=>`<div class="carousel-item"><div class="t-stars">${'<i class="fas fa-star"></i>'.repeat(t.stars)}</div><p class="testimonial-quote">${t.quote}</p><div class="testimonial-author"><div class="testimonial-avatar"><i class="fas fa-user"></i></div><div class="testimonial-info"><h4>${t.author}</h4><p>${t.role}</p></div></div></div>`).join('');
+  dots.innerHTML=TESTI.map((_,i)=>`<div class="dot ${i===0?'active':''}" onclick="goT(${i})"></div>`).join('');
+}
+function goT(i){tIdx=i;document.getElementById('carouselInner').style.transform=`translateX(-${tIdx*100}%)`;document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===tIdx))}
+function nextT(){goT((tIdx+1)%TESTI.length)}
+function prevT(){goT((tIdx-1+TESTI.length)%TESTI.length)}
+
+/* ---- LINKTREE ---- */
+const LINKS=[
+  {ico:'fab fa-instagram',title:'Instagram',desc:'Updates, reels & behind-the-scenes',url:'https://www.instagram.com/echo_between'},
+  {ico:'fab fa-youtube',title:'YouTube',desc:'Showreels & full performances',url:'https://m.youtube.com/@echo_between'},
+  {ico:'fab fa-tiktok',title:'TikTok',desc:'Short clips & highlights',url:'https://www.tiktok.com/@echo_between'},
+  {ico:'fas fa-fire',title:'Book a Show',desc:'Enquire about performances',url:'mailto:pablotalavera089@gmail.com?subject=Show Booking'},
+  {ico:'fas fa-graduation-cap',title:'Book a Workshop',desc:'Enquire about workshops',url:'mailto:pablotalavera089@gmail.com?subject=Workshop Enquiry'},
+  {ico:'fas fa-heart',title:'Support Our Work',desc:'Ko-fi tips & donations',url:'https://ko-fi.com/echo_between'},
+];
+function renderLinktree(){
+  const grid=document.getElementById('linktree-grid');
+  if(!grid)return;
+  grid.innerHTML=LINKS.map(l=>`<a href="${l.url}" target="_blank" rel="noopener noreferrer" style="color:inherit"><div class="lk-card"><div class="lk-ico"><i class="${l.ico}"></i></div><div class="lk-content"><h3>${l.title}</h3><p>${l.desc}</p></div><i class="fas fa-arrow-right lk-arrow"></i></div></a>`).join('');
+}
+
+/* ---- CONTACT FORM ---- */
+function submitCF(){
+  const first=document.getElementById('cf-first')?.value.trim();
+  const email=document.getElementById('cf-email')?.value.trim();
+  const type=document.getElementById('cf-type')?.value;
+  const msg=document.getElementById('cf-msg')?.value.trim();
+  if(!first||!email||!type||!msg){alert('Please fill all required fields');return}
+  const subject=`Kaidablo Booking: ${type}`;
+  const body=`Name: ${first} ${document.getElementById('cf-last')?.value||''}\nEmail: ${email}\nEnquiry: ${type}\nEvent: ${document.getElementById('cf-event')?.value||'—'}\n\n${msg}`;
+  window.location.href=`mailto:pablotalavera089@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('cf-success').style.display='block';
+}
+
+/* ---- ESC TO CLOSE MODALS ---- */
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('showModal').classList.remove('open');
+    document.getElementById('wmo').classList.remove('open');
+    closeMob();
+  }
+});
+
+/* ---- INIT ---- */
+renderShows();
+renderWS();
+renderSched('sched-list');
+renderGallery();
+renderTesti();
+renderReels();
+renderDownloads();
+renderLinktree();
+
+/* prevent default anchor jump */
+document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+</script>
+</body>
+</html>
